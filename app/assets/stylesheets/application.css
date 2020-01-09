@@ -14,22 +14,6 @@
  *= require_self
  */
 
- .header-link { 
-     /* font-style: italic; */
-     font-family: Georgia, 'Times New Roman', Times, serif;
-     font-weight: lighter;
-     color: #F1641E;
-     box-sizing: border-box;
-     text-decoration: none;
-     -webkit-font-smoothing: subpixel-antialiased;
-     margin: 50px;
-     border: 50px;
- }
-
-.login-signup {
-    display: flex;
-    justify-content: flex-end;
-}
 
 .modal-background {
   position: fixed;
@@ -37,7 +21,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(179, 178, 178, 0.7);
   z-index: 10;
 }
 
@@ -46,6 +30,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: lawngren;
+  /* background-color: white; */
 }
 
+button {
+    cursor: pointer;
+}

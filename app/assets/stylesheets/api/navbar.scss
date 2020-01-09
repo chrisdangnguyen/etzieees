@@ -1,0 +1,15 @@
+ .header-link { 
+     font-family: 'Noto Serif SC', serif;
+     font-weight: lighter;
+     color: #F1641E;
+     text-decoration: none;
+     transform: scale(1, 0.89);
+     --font-smoothing: subpixel-antialiased;
+ }
+
+.login-signup {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    

@@ -23,7 +23,8 @@ const App = () => (
             <Link to="/" className="header-link">
                 <h1>Etzieees</h1>
             </Link>
-            <GreetingContainer />
+            {/* <Navbar /> */}
+            <GreetingContainer className="greetings-logo"/>
         </header>
         <Switch>
             {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
