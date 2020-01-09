@@ -1,0 +1,112 @@
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 500px;
+    width: 360px;
+    border-radius: 5px;
+}
+
+.login-form-box {
+    width: 80%;
+    height: 80%;
+    
+}
+
+.login-form {
+    font-size: 14px;
+    font-weight: 560;
+    height: 65%;
+}
+
+
+.login-input {
+    font-size: 16px;
+    height: 10%;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+}
+
+.formtypebutton {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    width: 292px;
+    height: 30px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-input-fname {
+    font-size: 16px;
+    height: 26px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+}
+
+.formtypebutton:hover {
+    background: grayscale($color: #797878);
+}
+
+.demobutton {
+    font-size: 16px;
+    font-weight: 400;
+    color: #F1641E;
+    background-color: white;
+    width: 292px;
+    height: 30px;
+    border: 2px solid #F1641E;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.demobutton:hover {
+    background: #F1641E;
+    color: white;
+}
+
+
+.sign-in-div {
+    width: 80%;
+    padding-top: 5px;
+    height: 30px;
+}
+
+.signin-header {
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.create-account-div {
+    width: 80%;
+    padding-top: 5px;
+    height: 65px;
+}
+
+.create-header {
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.regis-easy {
+    font-weight: 100;
+    font-size: 16px;
+    color: black;
+    margin-top: 6px;
+}
+
+
+
+
+
+

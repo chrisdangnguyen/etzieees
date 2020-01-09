@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
+        
         <div className="login-signup">
             <button className="signin-m" onClick={() => (openModal('login'))}>
                 Sign in
@@ -14,12 +15,18 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                 Register
             </button>
         </div>
+
     );
     const personalGreeting = () => (
-        <hgroup className="header-group">
-            <h2 className="header-name">Welcome back, {currentUser.name}!</h2>
-            <button className="header-button" onClick={logout}>Sign Out</button>
-        </hgroup>
+        <div>
+            <div className="header-group">
+                <h2 className="header-name">Welcome back, {currentUser.name}!</h2>
+            </div>
+
+            <div className="dropdown-head">
+                <a href="#" onClick={logout} className="logout-btn">Sign out</a>
+            </div>
+        </div>
     );
 
     return currentUser ? personalGreeting() : sessionLinks();
