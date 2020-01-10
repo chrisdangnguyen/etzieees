@@ -50,7 +50,7 @@
 }
 
 .signin-m, .register-m  {
-    height: 60%;
+    height: 80%;
     font-size: 16px;
     font-weight: bold;
     border-radius: 40px;
@@ -62,13 +62,13 @@
 
 
 .shop-btn {
-    height: 60%;
-    font-size: 22px;
+    height: 80%;
+    font-size: 28px;
     font-weight: bold;
     border-radius: 40px;
     background-color: white;
     border: 1px solid white;
-    margin: 2px;
+  
 }
 
 .register-m:focus, .shop-btn:focus, .signin-m:focus  {
@@ -97,7 +97,7 @@
     height: 100%;
 }
 
-.sell-icon, .view-profile, .dropdown-head {
+.sell-icon {
 
     background-color: white;
     border: 1px solid white;
@@ -106,8 +106,8 @@
 }
 
 .shop-btn-loggedin {
-    height: 60%;
-    font-size: 22px;
+    height: 80%;
+    font-size: 28px;
     font-weight: bold;
     border-radius: 40px;
     background-color: white;
@@ -158,3 +158,59 @@
     margin-bottom: -1px;
     cursor: pointer;
 }
+
+//profile logo
+.profile-logo {
+    display: inline-block;
+    height: 36px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.dropdown-header {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content { 
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: -50px;
+//   z-index: 1;
+}
+
+.dropdown-header:hover .dropdown-content {
+    display: block;
+    z-index: 1;
+}
+
+.dropdown-head {
+    background-color: white;
+    border: 1px solid white;
+    // padding: 9px 5px;
+    // margin: 2px;
+}
+
+.logout-btn {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.view-link {
+    text-decoration: none;
+}
+
+.view-profile {
+    font-size: 16px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: lightgray;
+}
+
+
