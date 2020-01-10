@@ -32,18 +32,32 @@ const Navbar = ({ currentUser, logout, openModal }) => {
             </div>
 
             <div className="dropdown-header">
-                <Link to='' className="view-profile-link">
-                    <span className="view-profile">
-                        View profile
-                            {/* <i className="fa fa-caret-right" aria-hidden="true"></i> */}
-                        </span>
-                    <span className="first-name"></span>
-                </Link>
+                <img src={window.images.logo} className="profile-logo"/> 
+
+               
+               <div className="dropdown-content">
+                   <div className="dropdown-profile">
+                        <Link to='' className="view-link">
+                            <span className="view-profile">
+                             View Profile 
+                            <i className="fa fa-caret-right" aria-hidden="true"></i> 
+                            </span>
+                            <span className="first-name"></span>  
+                            {/* <img src={window.images.logo} />  */}
+                        </Link>
+                   </div>
+                    <div className="dropdown-head">
+                        <a href="#" onClick={logout} className="logout-btn">Sign out</a>
+                    </div>
+                </div>
+
+
+
             </div> 
 
-            <div className="dropdown-head">
+            {/* <div className="dropdown-head">
                 <a href="#" onClick={logout} className="logout-btn">Sign out</a>
-            </div>
+            </div> */}
 
             <button className="shop-btn-loggedin">
                 <i className="fa fa-shopping-cart"></i>
@@ -51,7 +65,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
         </div>
     );
-
 
     const tempSearchBar = (
         <form className="searchbar" action="action_page.php">
