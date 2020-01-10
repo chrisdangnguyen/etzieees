@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
+import Category from '../category/category'
 
 
 
@@ -77,6 +78,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                     </div>
                 </div>
             </nav>
+            <Category />
         </div>
     );
 

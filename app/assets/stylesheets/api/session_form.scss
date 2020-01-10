@@ -24,6 +24,7 @@
     font-weight: 560;
     height: 65%;
     padding-top: 20px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .login-input {
@@ -44,6 +45,7 @@
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
 }
 
 .login-input-fname {
@@ -52,6 +54,7 @@
     width: 100%;
     border-radius: 5px;
     border: 1px solid #c2c2c2;
+    -webkit-font-smoothing: antialiased;
 }
 
 .formtypebutton:hover {
@@ -68,6 +71,7 @@
     border: 2px solid #F1641E;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
 }
 
 .demobutton:hover {
@@ -87,6 +91,7 @@
     font-size: 28px;
     font-weight: 500;
     margin-top: 5px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .create-account-div {
@@ -101,6 +106,7 @@
     font-weight: 500;
     margin-top: 5px;
     margin-bottom: 5px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .regis-easy {
@@ -108,6 +114,7 @@
     font-size: 16px;
     color: black;
     margin-top: 6px;
+    -webkit-font-smoothing: antialiased;
 }
 
 
