@@ -25,16 +25,16 @@ class SessionForm extends React.Component {
             .then(this.props.closeModal);
     }
 
-    handleDemo(e) {
-        e.preventDefault();
-        const demo = Object.assign({}, {
-            email: 'demo@etzieees.com',
-            name: "Demo",
-            password: 'demo123'
-        });
-        this.props.processForm(demo)
-            .then(this.props.closeModal);
-    }
+    // handleDemo(e) {
+    //     e.preventDefault();
+    //     const demo = Object.assign({}, {
+    //         email: 'demo@etzieees.com',
+    //         name: "Demo",
+    //         password: 'demo123'
+    //     });
+    //     this.props.processForm(demo)
+    //         .then(this.props.closeModal);
+    // }
 
     renderErrors() {
         return (
@@ -48,6 +48,59 @@ class SessionForm extends React.Component {
         );
     }
 
+    // componentWillUnmount() {
+    //     this.renderErrors();
+    // }
+
+    
+    demo(user) {
+        const intervalSpeed = 75;
+        const { email, password } = user;
+        const demoEmailTime = email.length * intervalSpeed;
+        const demoPasswordTime = password.length * intervalSpeed;
+        const buffer = intervalSpeed * 2;
+        const totalDemoTime = demoEmailTime + demoPasswordTime + buffer;
+        this.demoEmail(email, intervalSpeed);
+        setTimeout(() => this.demoPassword(password, intervalSpeed), demoEmailTime);
+        setTimeout(() => this.props.loginForm(user), totalDemoTime)
+        setTimeout(() => this.props.closeModal(), totalDemoTime + buffer)
+    }
+
+    demoEmail(email, intervalSpeed) {
+        let i = 0;
+        setInterval(() => {
+            if (i <= email.length) {
+                this.setState({ email: email.slice(0, i) })
+                i++
+            } else {
+                clearInterval()
+            }
+        }, intervalSpeed);
+    }
+    demoPassword(password, intervalSpeed) {
+        let j = 0;
+        setInterval(() => {
+            if (j <= password.length) {
+                this.setState({ password: password.slice(0, j) })
+                j++
+            } else {
+                clearInterval();
+            }
+        }, intervalSpeed);
+    }
+
+
+    handleDemo(e) {
+        e.preventDefault();
+        const user = Object.assign({}, {
+            email: 'demo@etzieees.com',
+            name: "Demo",
+            password: 'demo123'
+        });
+        this.demo(user);
+    }
+
+    
     render() {
 
         const header = this.props.formType === 'Register'
@@ -88,7 +141,7 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                     {header}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    {this.renderErrors()}
+                    <span>{this.renderErrors()}</span>
                     <div className="login-form">
                         <br/>
                         <label>Email address

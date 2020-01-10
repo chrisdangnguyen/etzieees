@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
 .modal-background {
   position: fixed;
   top: 0;
@@ -35,4 +34,8 @@
 
 button {
     cursor: pointer;
+}
+
+button:focus, input:focus {
+outline: 0;
 }
