@@ -1,0 +1,160 @@
+.body {
+  margin: 0;
+  min-width: 1000px;
+}
+
+.navbar-container {
+    border-bottom: 1px solid grayscale($color: #d3d3d3);
+    width: 100%;
+    min-width: 1000px;
+    height: 106px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    padding-right: 36px;
+    padding-left: 36px;
+    padding: 12px 12px;
+}
+
+.header-link { 
+     
+     text-decoration: none;
+     display: flex;
+     align-content: center;
+     margin: 2px;
+     justify-content: flex-start;
+ }
+
+
+ .logo-name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: lighter;
+    color: #F1641E;
+    margin: 0px;
+    font-size: 40px;
+    transform: scale(1, 0.89);
+    --font-smoothing: subpixel-antialiased;
+    padding-right: 6px;
+    height: 100%;
+ }
+
+.login-signup {
+    display: flex;
+    align-items: center ;
+    justify-content: flex-end;
+    height: 100%;
+  
+}
+
+.signin-m, .register-m  {
+    height: 60%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: white;
+    border: 1px solid white;
+    // padding: 9px 15px;
+    margin: 2px;
+}
+
+
+.shop-btn {
+    height: 60%;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: white;
+    border: 1px solid white;
+    margin: 2px;
+}
+
+.register-m:focus, .shop-btn:focus, .signin-m:focus  {
+    outline: 0;
+}
+
+.signin-m:hover, .register-m:hover, .shop-btn:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+
+// logged-in user
+
+// .navbar-right {
+//     display: flex;
+//     align-items: center ;
+//     justify-content: flex-end;
+//     text-decoration: none;
+//     height: 100%;
+// }
+
+.loggedin-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sell-icon, .view-profile, .dropdown-head {
+
+    background-color: white;
+    border: 1px solid white;
+    padding: 9px 5px;
+    margin: 2px;
+}
+
+.shop-btn-loggedin {
+    height: 60%;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.sell-link:hover, .logout-btn:hover, .view-profile:hover {
+    text-decoration: underline;
+}
+
+.logout-btn, .sell-link, .view-profile, .view-profile-link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.shop-btn-loggedin:focus  {
+    outline: 0;
+}
+
+
+// catergories navbar
+
+.categories {
+    height: 34px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // align-content: space-evenly;
+    box-sizing: border-box;
+    padding-right: 18px;
+    padding-left: 12px;
+    align-items: center;
+}
+
+.categories a {
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    font-size: 14px;;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+.categories a:hover{
+    border-bottom: 5px solid #F1641E;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
