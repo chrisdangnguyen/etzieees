@@ -2,7 +2,6 @@
 //   box-sizing: border-box;
 // }
 
-
 // searchbar 
 
 .navbar-left {
@@ -53,7 +52,7 @@
   border-left: 1px rgb(190, 190, 190);
   border-top: 1px rgb(190, 190, 190);
   border-bottom: 1px rgb(190, 190, 190);
-  
+  -webkit-font-smoothing: antialiased;
 }
 
 

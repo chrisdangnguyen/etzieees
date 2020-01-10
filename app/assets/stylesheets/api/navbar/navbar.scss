@@ -20,7 +20,7 @@
 }
 
 .header-link { 
-     height: 100%;
+     
      text-decoration: none;
      display: flex;
      align-content: center;
@@ -128,4 +128,33 @@
 .shop-btn-loggedin:focus  {
     outline: 0;
 }
-// searchbar 
+
+
+// catergories navbar
+
+.categories {
+    height: 34px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // align-content: space-evenly;
+    box-sizing: border-box;
+    padding-right: 18px;
+    padding-left: 12px;
+    align-items: center;
+}
+
+.categories a {
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    font-size: 14px;;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+.categories a:hover{
+    border-bottom: 5px solid #F1641E;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
