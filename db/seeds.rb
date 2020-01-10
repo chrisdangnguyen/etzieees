@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
-User.create({email: "demo@etzieees", name: "Demo", password: "demo123"})git 
+User.create({email: "demo@etzieees", name: "Demo", password: "demo123"})git gitgit
