@@ -81,8 +81,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
             <Category />
         </div>
     );
-
-
     
 };
 
