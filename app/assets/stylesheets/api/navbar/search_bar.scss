@@ -6,27 +6,28 @@
 
 .navbar-left {
     display: flex;
-    width: 65%;
+    width: 73%;
+    height: 100%;
 }
 
 .searchbar {
     align-self: center;
-    width: 80%;
+    width: 100%;
     height: 90%;
+    font-family: sans-serif;
 
 }
 
 .searchbar input {
-    width: 90%;
+    width: 93%;
     height: 100%;
+    box-sizing: border-box;
     border-radius: 100px 0px 0px 100px;
     background-color: grayscale($color: #e7e4e4);
     font-size: 16px;
-    border-left: 1px rgb(190, 190, 190);
-    border-top: 1px rgb(190, 190, 190);
-    border-bottom: 1px rgb(190, 190, 190);
     padding-left: 15px;
-    // padding-right: 3px;
+    border: 0px;
+    margin: 0px;
 
 }
 .searchbar input:focus {
@@ -37,22 +38,28 @@
   background: #aaabac;
 }
 
-.searchbar button {
+form.searchbar {
+  height: 100%;
+}
+
+
+.searchbutton {
+  display: in;
   float: right;
-  height: 45.19px;
-  position: fixed;
+  height: 100%;
+  // position: absolute;
   width: 7%;
-//   padding: 10px;
+  padding: 0px;
   border-radius: 0px 100px 100px 0px;
   background: grayscale($color: #e7e4e4);
   color: black;
-//   padding-left: 6px;
-  font-size: 17px;
+  font-size: 24px;
   cursor: pointer;
-  border-left: 1px rgb(190, 190, 190);
   border-top: 1px rgb(190, 190, 190);
   border-bottom: 1px rgb(190, 190, 190);
   -webkit-font-smoothing: antialiased;
+  border: 0px;
+  margin: 0px;
 }
 
 
