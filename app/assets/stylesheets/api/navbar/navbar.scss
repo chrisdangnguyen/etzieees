@@ -57,7 +57,7 @@
     background-color: white;
     border: 1px solid white;
     // padding: 9px 15px;
-    margin: 2px;
+    margin: 6px;
 }
 
 
@@ -90,6 +90,10 @@
 //     height: 100%;
 // }
 
+.navbar-right {
+    font-family: sans-serif;
+}
+
 .loggedin-navbar {
     display: flex;
     align-items: center;
@@ -101,7 +105,7 @@
 
     background-color: white;
     border: 1px solid white;
-    padding: 9px 5px;
+    padding: 9px 10px;
     margin: 2px;
 }
 
@@ -112,6 +116,7 @@
     border-radius: 40px;
     background-color: white;
     border: 1px solid white;
+    padding: 0 10px;
 }
 
 .sell-link:hover, .logout-btn:hover, .view-profile:hover {
@@ -142,6 +147,7 @@
     padding-right: 18px;
     padding-left: 12px;
     align-items: center;
+    font-family: sans-serif;
 }
 
 .categories a {
@@ -170,6 +176,7 @@
 .dropdown-header {
     position: relative;
     display: inline-block;
+    padding: 10px;
 }
 
 .dropdown-content { 
