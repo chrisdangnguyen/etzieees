@@ -9,7 +9,7 @@ class Category extends React.Component {
                 <Link to=""> Clothing & Shoes</Link>
                 <Link to="">Home & Living</Link>
                 <Link to="">Wedding & Party</Link>
-                <a href="https://www.google.com/">Google</a> {/* <Link to="">Toys & Entertainment</Link> */}
+                <Link to="">Toys & Entertainment</Link>
                 <Link to="">Art & Collectibles</Link>
                 <Link to="">Craft Supplies</Link>
                 <Link to="">Vintage</Link>
