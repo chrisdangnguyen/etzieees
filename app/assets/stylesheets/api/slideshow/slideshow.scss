@@ -1,0 +1,50 @@
+.slideshow {
+    padding: 18px 36px 24px 36px;
+}
+
+.slideshow div {
+    border-radius: 5px;
+    height: 100%;
+}
+
+.slideshow {
+   z-index: 2;
+   height: 500px;
+
+}
+
+
+.slide-1 {
+    background-image: url("https://etzieees-dev.s3-us-west-1.amazonaws.com/clothings.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.slide-2 {
+    background-image: url("https://etzieees-dev.s3-us-west-1.amazonaws.com/jewelry.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide-3 {
+    background-image: url("https://etzieees-dev.s3-us-west-1.amazonaws.com/photograph.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide-4 {
+    background-image: url("https://etzieees-dev.s3-us-west-1.amazonaws.com/homeliving.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide-5 {
+    background-image: url("https://etzieees-dev.s3-us-west-1.amazonaws.com/hats.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}

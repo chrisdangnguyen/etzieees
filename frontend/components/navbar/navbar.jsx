@@ -84,7 +84,11 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                         <Link to="/" className="header-link">
                             <h1 className="logo-name">Etzieees</h1>
                         </Link>
-                    {tempSearchBar}
+                        <form className="searchbar" action="action_page.php">
+                            <input type="text" placeholder="Search for items or shops"
+                                name="search" />
+                            <button type="submit" className="searchbutton"><i className="fa fa-search"></i></button>
+                        </form>
                     </div>
                     <div className="navbar-right">
                         {greeting}
@@ -94,7 +98,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
             <Category />
         </div>
     );
-    
+     
 };
 
 
