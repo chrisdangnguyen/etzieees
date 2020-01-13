@@ -14,6 +14,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import NavbarContainer from './navbar/navbar_container';
 // import SearchContainer from './search/search_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Homepage from './homepage/homepage'
 
 
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
         <Switch>
             {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
+            <Route exact path="/" component={Homepage} />
         </Switch>
     </div>
 );
