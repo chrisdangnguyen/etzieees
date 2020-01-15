@@ -9,12 +9,12 @@ import {
 } from 'react-router-dom';
 
 import Modal from './modal/modal';
-import SignUpFormContainer from './session_form/signup_form_container';
-import LogInFormContainer from './session_form/login_form_container';
 import NavbarContainer from './navbar/navbar_container';
+import CreateProductContainer from './product/create_product_container';
 // import SearchContainer from './search/search_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Homepage from './homepage/homepage'
+import Homepage from './homepage/homepage';
+import Footerbar from './footer/footer';
 
 
 const App = () => (
@@ -24,12 +24,11 @@ const App = () => (
             <NavbarContainer />
         </header>
         <Switch>
-            {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
+            <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>
-            {/* <Footer /> */}
+            <Footerbar />
         </footer>
     </div>
 );
