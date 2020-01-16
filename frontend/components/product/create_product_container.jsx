@@ -3,7 +3,7 @@ import ProductForm from './product_form';
 import { createProduct } from '../../actions/product_actions';
 
 const mapSTP = (state) => ({
-    product: { title: "", description: "", price: "", category: "", quantity: ""},
+    product: { title: "", description: "", price: "", category: "", quantity: "", user_id: state.session.id},
     formType: "create product",
     errors: state.errors.products
 });
