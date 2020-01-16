@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const ProductIndexItem = ({product}) => {
     return (
         <div className="product-item">
-            <li>
                 <Link to={`/products/${product.id}`}>
                     <img src={product.photoUrl}/>
                 </Link>
@@ -13,9 +12,8 @@ const ProductIndexItem = ({product}) => {
                     {product.title}
                 </li>   
                 <li className="product-price">
-                    {product.price}
+                    ${product.price.toFixed(2)}
                 </li>
-            </li>
         </div>
     )
 }

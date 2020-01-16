@@ -35,30 +35,30 @@ export const createProduct = product => dispatch => (
 );
 
 
-export const fetchProduct = id => dispatch => (
-    APIUtil.fetchProduct(id) 
+export const fetchProduct = productId => dispatch => (
+    APIUtil.fetchProduct(productId) 
         .then(product => (dispatch(receiveProduct(product))),
         errors => (dispatch(receiveProductErrors(errors.responseJSON)))
     )
 );
 
-export const fetchAllProducts = userId => dispatch => (
-    APIUtil.fetchAllProducts(userId)
+export const fetchAllProducts = () => dispatch => (
+    APIUtil.fetchAllProducts()
         .then(products => (dispatch(receiveAllProducts(products))),
         errors => (dispatch(receiveProductErrors(errors.responseJSON)))
     )
 );
 
-export const updateProduct = id => dispatch => (
-    APIUtil.updateProduct(id)
+export const updateProduct = product => dispatch => (
+    APIUtil.updateProduct(product)
         .then(product => (dispatch(receiveProduct(product))),
             errors => (dispatch(receiveProductErrors(errors.responseJSON)))
         )
 );
 
-export const deleteProduct = id => dispatch => (
-    APIUtil.deleteProduct(id) 
-        .then(() => dispatch(removeProduct(id)),
+export const deleteProduct = productId => dispatch => (
+    APIUtil.deleteProduct(productId) 
+        .then(() => dispatch(removeProduct(productId)),
         errors => (dispatch(receiveProductErrors(errors.responseJSON)))
     )
 );

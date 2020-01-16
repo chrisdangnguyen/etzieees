@@ -3,7 +3,8 @@ import ProductIndex from './product_index';
 import { fetchAllProducts, fetchCategory } from "../../actions/product_actions"
 
 const mapSTP = state => ({
-    products: Object.keys(state.entities.products).map( id => state.entities.products[id])
+    products: Object.values(state.entities.products)
+        
 });
 
 const mapDTP = (dispatch, ownProps) => {
@@ -14,14 +15,14 @@ const mapDTP = (dispatch, ownProps) => {
         else if ( ownProps.match.path === '/categories/:type' ) {
             return dispatch(fetchCategory(ownProps.match.params.type))
         } else {
-            return  dispatch({type: "null_action"});
+            return  new Promise(resolve => resolve());
         }
     }
-    return { action: () => validatePath() }
+     return {action: () => validatePath() }
 
-    // return ({
-    //     action: () => dispatch(fetchAllProducts())
-    // })
+    
+        // action: () => dispatch(fetchAllProducts())
+    
 };
 
 export default connect(mapSTP, mapDTP)(ProductIndex);

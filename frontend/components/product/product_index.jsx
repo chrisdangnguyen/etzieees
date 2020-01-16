@@ -1,30 +1,37 @@
 import React from 'react';
-import ProductIndexItem from './product_index_container';
+import ProductIndexItem from './product_index_item';
 
 
 class ProductIndex extends React.Component {
-    componentDidMount() {
+    
 
-        console.log(this.props);
+    componentDidMount() {
+        this.props.action()
+    }
+
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.category !== this.props.category) {
+            this.props.action()
+        }
     }
 
     render() {
-        const { products } = this.props;
+
+        const {products} = this.props;
 
         return (
-            <div>
-                <li>
-                    {products.map( product => <ProductIndexItem 
+            <div className="product-index-container">
+                <ul>
+                    {products.map(product => <ProductIndexItem
                                                 product={product}
                                                 key={product.id}
                                                 />
                                 )
                     }
-                </li>
-                <div>Darryl is sooooooooooooooooo oh yeahhhhh
-                     </div>
+                </ul>
             </div>
-        );
+        )
     }
 }
 

@@ -5,15 +5,15 @@ class Category extends React.Component {
     render() {
         return(
             <div className="categories">
-                <Link to="">Jewelry & Accessories</Link>
-                <Link to=""> Clothing & Shoes</Link>
-                <Link to="">Home & Living</Link>
-                <Link to="">Wedding & Party</Link>
-                <Link to="">Toys & Entertainment</Link>
-                <Link to="">Art & Collectibles</Link>
-                <Link to="">Craft Supplies</Link>
-                <Link to="">Vintage</Link>
-                <Link to="">Gifts</Link>
+                <Link to="/categories/jewelry&accessories">Jewelry & Accessories</Link>
+                <Link to="/categories/clothing&shoes"> Clothing & Shoes</Link>
+                <Link to="/categories/home&living">Home & Living</Link>
+                <Link to="/categories/wedding&party">Wedding & Party</Link>
+                <Link to="/categories/toys&entertainment">Toys & Entertainment</Link>
+                <Link to="/categories/art&collectibles">Art & Collectibles</Link>
+                <Link to="/categories/craftsupplies">Craft Supplies</Link>
+                <Link to="/categories/vintage">Vintage</Link>
+                {/* <Link to="categories/clothing&shoes">Gifts</Link> */}
             </div>
         );
     };

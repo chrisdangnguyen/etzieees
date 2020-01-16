@@ -21,18 +21,18 @@ export const fetchAllProducts = userId => (
     })
 );
 
-export const updateProduct = id => (
+export const updateProduct = product => (
     $.ajax({
         method: 'PATCH',
-        url: `api/products/${id}`,
+        url: `api/products/${product.id}`,
         data: { product }
     })
 );
 
-export const deleteProduct = id => (
+export const deleteProduct = productId => (
     $.ajax({
         method: 'DELETE',
-        url: `api/products/${id}`
+        url: `api/products/${productId}`
     })
 );
 
