@@ -9,12 +9,13 @@ import {
 } from 'react-router-dom';
 
 import Modal from './modal/modal';
-import SignUpFormContainer from './session_form/signup_form_container';
-import LogInFormContainer from './session_form/login_form_container';
 import NavbarContainer from './navbar/navbar_container';
-// import SearchContainer from './search/search_container';
+import CreateProductContainer from './product/create_product_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Homepage from './homepage/homepage'
+import Homepage from './homepage/homepage';
+import Footerbar from './footer/footer';
+import ProductIndexContainer from './product/product_index_container';
+
 
 
 const App = () => (
@@ -24,12 +25,14 @@ const App = () => (
             <NavbarContainer />
         </header>
         <Switch>
-            {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
+            <Route exact path="/products" component={ProductIndexContainer} />
+            <Route exact path="/products/productId" component={ProductIndexContainer} />
+            <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
+            <Route exact path="/categories/:type" componenent={ProductIndexContainer} />
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>
-            {/* <Footer /> */}
+            <Footerbar />
         </footer>
     </div>
 );

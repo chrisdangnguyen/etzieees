@@ -28,7 +28,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         <div className="loggedin-navbar">
 
             <div className="sell-icon">
-                <a href="#" className="sell-link">Sell on Etzieees</a>
+                <Link to="/products/new" className="sell-link">
+                    Sell on Etzieees
+                </Link>
             </div>
 
             <div className="dropdown-header">

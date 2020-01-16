@@ -1,0 +1,46 @@
+.footer {
+    min-width: 1000px;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between ;
+    list-style-type: none;
+    padding: 24px;
+    background-color: #232958;
+    color: white;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+
+}
+
+.flag {
+    font-size: 12px;
+    height: 32px;
+    width: 32px;
+    padding-right: 7px;
+    display: flex;
+    text-align: center;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.fa.fa-linkedin-square {
+    font-size: 40px;
+    padding: 10px 10px 10px 20px;
+}
+
+.fa.fa-github {
+    font-size: 40px;
+    padding: 10px;
+}

@@ -3,7 +3,10 @@ class User < ApplicationRecord
     validates :email, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
 
-    has_many :products
+    has_many :products,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: "Product"
 
     attr_reader :password
 

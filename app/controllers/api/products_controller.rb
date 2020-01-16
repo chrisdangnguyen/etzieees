@@ -11,12 +11,7 @@ class Api::ProductsController < ApplicationController
     end
 
     def index 
-        if params[:user_id]
-            @products = Product.where(user_id: params[:user_id])
-        else
-            @products = Product.all 
-        end
-
+        @products = Product.all 
         render :index
     end
 
@@ -25,28 +20,28 @@ class Api::ProductsController < ApplicationController
     end
 
     def update
-        @product = Product.find(params[:id])
+        @product = Product.find_by(id: params[:id])
 
         if @product.update(product_params) ## need to the option to update photos
-            render 'api/product/show' # difference between this and render :show --check
+            render :show # difference between this and render :show --check
         else
-            render json: @product.errors.full_messages, status 422
+            render json: @product.errors.full_messages, status: 422
         end
     end
 
     def destroy 
-        @product = Product.find(params[:id])
+        @product = Product.find_by(id: params[:id])
         if @product.destroy
             render :show
         else
-            render json: @product.errors.full_messages, status 422
+            render json: @product.errors.full_messages, status: 422
         end
     end
 
     private 
 
     def product_params
-        params.require(:product).permit(:product_name, :detail, :price, :user_id, :id, :quantity, :category)
+        params.require(:product).permit(:id, :title, :description, :price, :user_id, :id, :quantity, :category)
     end
 
 end

@@ -7,8 +7,8 @@ class Slideshow extends React.Component {
         const setting = {
             dots: true,
             infinite: true,
-            speed: 1200,
-            autoplaySpeed: 4800,
+            speed: 1000,
+            autoplaySpeed: 3600,
             slideToShow: 1,
             slideToScroll: 1,
             autoplay: true,

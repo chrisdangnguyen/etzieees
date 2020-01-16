@@ -1,9 +1,16 @@
 node_modules/
 bundle.js
 bundle.js.map
+<<<<<<< HEAD
+config/master.key
+=======
 /log/*
 /tmp/*
 !/log/.keep
+<<<<<<< HEAD
 
+=======
+>>>>>>> products
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+>>>>>>> master
