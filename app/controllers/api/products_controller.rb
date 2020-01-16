@@ -1,5 +1,5 @@
 class Api::ProductsController < ApplicationController
-    # before_action :require_logged_in, only: [:create, :update, :destroy]
+    before_action :require_logged_in, only: [:create, :update, :destroy]
 
     def create
         @product = Product.new(product_params)
@@ -46,7 +46,7 @@ class Api::ProductsController < ApplicationController
     private 
 
     def product_params
-        params.require(:product).permit(:id, :product_name, :detail, :price, :user_id, :quantity, :category)
+        params.require(:product).permit(:id, :title, :description, :price, :user_id, :id, :quantity, :category)
     end
 
 end

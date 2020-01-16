@@ -15,6 +15,8 @@ import CreateProductContainer from './product/create_product_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Homepage from './homepage/homepage';
 import Footerbar from './footer/footer';
+import ProductIndexContainer from './product/product_index_container';
+
 
 
 const App = () => (
@@ -24,7 +26,9 @@ const App = () => (
             <NavbarContainer />
         </header>
         <Switch>
+            <Route exact path="/products" component={ProductIndexContainer} />
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
+            {/* <Route exact path="/categories/:type" componenent={} /> */}
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>

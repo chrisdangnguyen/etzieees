@@ -25,17 +25,6 @@ class SessionForm extends React.Component {
             .then(this.props.closeModal);
     }
 
-    // handleDemo(e) {
-    //     e.preventDefault();
-    //     const demo = Object.assign({}, {
-    //         email: 'demo@etzieees.com',
-    //         name: "Demo",
-    //         password: 'demo123'
-    //     });
-    //     this.props.processForm(demo)
-    //         .then(this.props.closeModal);
-    // }
-
     renderErrors() {
         return (
             <ul>
@@ -48,11 +37,6 @@ class SessionForm extends React.Component {
         );
     }
 
-    // componentWillUnmount() {
-    //     this.renderErrors();
-    // }
-
-    
     demo(user) {
         const intervalSpeed = 75;
         const { email, password } = user;

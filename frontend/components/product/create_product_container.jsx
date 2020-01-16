@@ -1,9 +1,9 @@
-import { connect } from 'react-dom';
+import { connect } from 'react-redux';
 import ProductForm from './product_form';
 import { createProduct } from '../../actions/product_actions';
 
 const mapSTP = (state) => ({
-    product: { productName: "", detail: "", price: "", category: "", quantity: ""},
+    product: { title: "", description: "", price: "", category: "", quantity: ""},
     formType: "create product",
     errors: state.errors.products
 });
@@ -14,4 +14,3 @@ const mapDTP = dispatch => ({
 
 
 export default connect(mapSTP, mapDTP)(ProductForm);
-

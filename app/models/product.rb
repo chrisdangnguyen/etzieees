@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-    validates :product_name, :price, :detail, :quantity, :user_id, presence: true 
+    validates :title, :price, :description, :quantity, :user_id, presence: true 
     validates :price, numericality: { greater_than: 0 }
     validates :quantity, numericality: { greater_than: 0 }
     validates :category, inclusion: { in: %w(jewelry & accessories, clothings & shoes, 
@@ -8,6 +8,6 @@ class Product < ApplicationRecord
 
     belongs_to :user
 
-    has_many_attached :images
+    has_one_attached :photo
 
 end
