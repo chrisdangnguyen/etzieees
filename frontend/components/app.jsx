@@ -28,6 +28,7 @@ const App = () => (
             <Route exact path="/products" component={ProductIndexContainer} />
             <Route exact path="/products/productId" component={ProductIndexContainer} />
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
+            {/* <ProtectedRoute exact path="/products/productId/:edit" component={} /> */}
             <Route exact path="/categories/:type" componenent={ProductIndexContainer} />
             <Route exact path="/" component={Homepage} />
         </Switch>

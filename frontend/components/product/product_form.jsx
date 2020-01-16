@@ -5,9 +5,9 @@ import { withRouter } from 'react-router-dom';
 class ProductForm extends React.Component {
     constructor(props) {
         super(props)
-        
-        this.state = Object.assign( {}, { photoFiles: "", photoUrls: ""} , this.props.product)
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = Object.assign( {}, { photoFile: null, photoUrl: null} , this.props.product)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
 
     }
 
@@ -30,11 +30,16 @@ class ProductForm extends React.Component {
         formData.append('product[user_id]', this.state.user_id);
         formData.append('product[category]', this.state.category);
         formData.append('product[quantity]', this.state.quantity);
+        if (this.state.photoFile === "") {
+            this.setState({ photoFile: null })
+        }
+        if (this.state.photoFile) {
+            formData.append('product[photo]', this.state.photoFile);
+        }
 
-
-        if (this.state.photoFiles) {
-                formatData.append('product[photo]', photoFiles);
-            }
+        // if (this.state.photoFile) {
+        //         formatData.append('product[photo]', photoFile);
+        //     }
 
         this.props.processForm(formData)
             .then(payload => {
@@ -55,15 +60,28 @@ class ProductForm extends React.Component {
     }
 
 
+    handleFile(e) {
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+
+        this.setState({ photoFile: file, photoURL: fileReader.result})
+        }
+
+        fileReader.readAsDataURL(file);
+    }
+
     render() {
+        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+
         return (
             <div className="product-form">
                 <h1>Add a new listing</h1>
                 {this.renderErrors()}
                 <div className="photo-container">
                     <div className="photo-info">
-                    <h2>Photos</h2>
-                    <p className="product-p1">Add as many as you can so buyers can see every detail.</p>
+                        <h2>Photos</h2>
+                        <p className="product-p1">Add as many as you can so buyers can see every detail.</p>
                             <div className="photo-list">
                             <p className="product-p2">Use up to ten photos to show your item's most important
                                 qualities.
@@ -78,13 +96,23 @@ class ProductForm extends React.Component {
                                 Include a common object for scale.
                             </li>
                             <li>
-                                Show the tiem being held, worn, or used.
+                                Show the item being held, worn, or used.
                             </li>
                             <li>
                                 Shoot against a clean, simple background.
                             </li>
                         </div>
                     </div>
+
+
+                    <div>
+                        <input type="file"
+                            onChange={this.handleFile} 
+                        />
+                        <h3>Image Preview</h3>
+                        {preview}
+                    </div>
+
                 </div>
 
                 <form className="detail-container" onSubmit={this.handleSubmit}>

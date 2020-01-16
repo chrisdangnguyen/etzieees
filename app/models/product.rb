@@ -5,13 +5,20 @@ class Product < ApplicationRecord
     validates :category, inclusion: { in: ["jewelry & accessories", "clothings & shoes", 
             "home & living", "toys & entertainment", "art & collectibles", "craft supplies", "vintage"],
             message: "%{value} is not a valid category" }
+    validate :ensure_photo
         
-
-    belongs_to :owner,
-        primary_key: :id,
-        foreign_key: :user_id,
-        class_name: "User"
-
+    
+    belongs_to :seller,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: "User"
+    
     has_one_attached :photo
-
+    
+        
+    def ensure_photo
+        unless self.photo.attached?
+                errors[:photo] << "Must be attached"
+        end
+    end
 end
