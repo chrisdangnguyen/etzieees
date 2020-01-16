@@ -33,7 +33,11 @@ const App = () => (
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>
+<<<<<<< HEAD
             <Footerbar />
+=======
+            {/* <Footer /> */}
+>>>>>>> 8c3030ff7f5cf92a656fa438e2472e11dfca799e
         </footer>
     </div>
 );
