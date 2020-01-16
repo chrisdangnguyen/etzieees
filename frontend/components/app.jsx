@@ -28,16 +28,11 @@ const App = () => (
             <Route exact path="/products" component={ProductIndexContainer} />
             <Route exact path="/products/productId" component={ProductIndexContainer} />
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
-            {/* <ProtectedRoute exact path="/products/productId/:edit" component={} /> */}
             <Route exact path="/categories/:type" componenent={ProductIndexContainer} />
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>
-<<<<<<< HEAD
             <Footerbar />
-=======
-            {/* <Footer /> */}
->>>>>>> 8c3030ff7f5cf92a656fa438e2472e11dfca799e
         </footer>
     </div>
 );
