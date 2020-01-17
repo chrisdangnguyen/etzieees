@@ -8,13 +8,26 @@ class ProductForm extends React.Component {
         this.state = Object.assign( {}, { photoFile: null, photoUrl: null} , this.props.product)
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        // this.handleDelete = this.handleDelete.bind(this)
 
     }
 
 
     // componentDidMount() {
-    //     console.log(this.props)
+    //     if (this.props.formType === "edit product") {
+    //         this.props.fetchProduct(this.props.match.params.productId);
+    //     }
     // }
+
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.match.params.productId != prevProps.product.id) {
+    //         this.props.fetchProduct(this.props.match.params.productId)
+    //             .then(() => { this.setState(this.props.product)}
+    //         );
+    //     }
+    // }
+
+   
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -47,6 +60,11 @@ class ProductForm extends React.Component {
             });
     }
 
+    // handleDelete() {
+    //     this.props.deleteProduct(this.props.product.id)
+    //         .then(() => { this.props.history.push('/products')})
+    // }
+
     renderErrors() {
         return (
             <ul>
@@ -65,18 +83,31 @@ class ProductForm extends React.Component {
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
 
-        this.setState({ photoFile: file, photoURL: fileReader.result})
+        this.setState({ photoFile: file, photoUrl: fileReader.result})
         }
-
-        fileReader.readAsDataURL(file);
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
     }
 
     render() {
-        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+        const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className="photo-preview" /> : null;
+
+
+        let header;
+        let deleteButton;
+
+        if (this.props.formType === "Edit product") {
+            header = "Update listing";
+            deleteButton = <button onClick={this.handleDelete} className="delete-button">Delete listing</button>
+        } else {
+            header = "Add a new listing";
+        }
+
 
         return (
             <div className="product-form">
-                <h1>Add a new listing</h1>
+                <h1>{header}</h1>
                 {this.renderErrors()}
                 <div className="photo-container">
                     <div className="photo-info">
@@ -109,7 +140,6 @@ class ProductForm extends React.Component {
                         <input type="file"
                             onChange={this.handleFile} 
                         />
-                        <h3>Image Preview</h3>
                         {preview}
                     </div>
 
@@ -155,6 +185,7 @@ class ProductForm extends React.Component {
                     </label>
 
                     <div className="submission-buttons">
+                        {/* {deleteButton} */}
                         <input type="submit" value="Save and Continue"/>
                     </div>
 

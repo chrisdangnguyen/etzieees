@@ -15,6 +15,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Homepage from './homepage/homepage';
 import Footerbar from './footer/footer';
 import ProductIndexContainer from './product/product_index_container';
+import ProductShowContainer from './product/product_show_container';
 
 
 
@@ -25,10 +26,11 @@ const App = () => (
             <NavbarContainer />
         </header>
         <Switch>
-            <Route exact path="/products" component={ProductIndexContainer} />
-            <Route exact path="/products/productId" component={ProductIndexContainer} />
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
-            <Route exact path="/categories/:type" componenent={ProductIndexContainer} />
+            <Route exact path="/products/:productId" component={ProductShowContainer} />
+            <Route exact path="/products" component={ProductIndexContainer} />
+            {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
+            {/* <Route exact path="/categories/:type" componenent={ProductIndexContainer} /> */}
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>

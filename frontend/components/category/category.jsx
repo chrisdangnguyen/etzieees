@@ -13,7 +13,7 @@ class Category extends React.Component {
                 <Link to="/categories/art&collectibles">Art & Collectibles</Link>
                 <Link to="/categories/craftsupplies">Craft Supplies</Link>
                 <Link to="/categories/vintage">Vintage</Link>
-                {/* <Link to="categories/clothing&shoes">Gifts</Link> */}
+                <Link to="/products">View All</Link>
             </div>
         );
     };

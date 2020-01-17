@@ -17,6 +17,7 @@ class Api::ProductsController < ApplicationController
 
     def show
         @product = Product.find_by(id: params[:id])
+        # render :show
     end
 
     def update
@@ -41,7 +42,7 @@ class Api::ProductsController < ApplicationController
     private 
 
     def product_params
-        params.require(:product).permit(:id, :title, :description, :price, :user_id, :id, :quantity, :category, :photo)
+        params.require(:product).permit(:id, :title, :description, :price, :user_id, :quantity, :category, :photo)
     end
 
 end

@@ -3,7 +3,7 @@ class Product < ApplicationRecord
     validates :price, numericality: { greater_than: 0 }
     validates :quantity, numericality: { greater_than: 0 }
     validates :category, inclusion: { in: ["jewelry & accessories", "clothings & shoes", 
-            "home & living", "toys & entertainment", "art & collectibles", "craft supplies", "vintage"],
+            "home & living", "wedding & party", "toys & entertainment", "art & collectibles", "craft supplies", "vintage"],
             message: "%{value} is not a valid category" }
     validate :ensure_photo
         
