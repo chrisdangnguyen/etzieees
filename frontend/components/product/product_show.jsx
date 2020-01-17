@@ -23,27 +23,28 @@ class ProductShow extends React.Component {
         if (!this.props.product) {
             return null
         }
+
         return (
             <div className="show-container">
                 <div className="show-colum">
                     <div className="show-col-left">
-                        <img src={product.photoUrl}/>
+                        <img src={product.photoUrl} className="show-photo"/>
                         {/* <li>Where reviews will fall under</li> */}
-                    </div>
-                    <div className="show-col-right">
-                        <div className="product-info">
-                            <li>{product.title}</li>
-                            <li>${product.price.toFixed(2)}</li>
-                            <li>{product.quantity}</li>
-                            <button className="product-to-cart">Add to cart</button>
-                        </div>
                         <div className="product-description">
                             <div>
                                 {product.description}
                             </div>
                             <div>
-                                {seller.name}  {/*this might be wrong but need to double check this*/}
+                                {/* {seller.name}   */}
                             </div>
+                        </div>
+                    </div>
+                    <div className="show-col-right">
+                        <div className="product-info">
+                            <h2>{product.title}</h2>
+                            <h3>${product.price.toFixed(2)}</h3>
+                            <li>{product.quantity}</li>
+                            <button className="product-to-cart">Add to cart</button>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,31 @@
+.show-container{
+    display: flex;
+    padding-top: 30px;
+    list-style-type: none;
+}
+
+.show-colum {
+    display: flex;
+    justify-content: center;
+}
+
+.show-col-right {
+    display: flex;
+    padding: 0px 75px 0px 75px;;
+    width: 60%;
+}
+.show-photo{
+    max-width: 500px;
+    max-height: 650px;
+}
+
+.show-col-left {
+    padding: 0px 75px 0px 75px;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    
+}
+

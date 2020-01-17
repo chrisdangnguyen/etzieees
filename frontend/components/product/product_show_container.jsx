@@ -17,6 +17,7 @@ const mapSTP = (state, ownProps) => {
     })
 }
 
+
 const mapDTP = dispatch => ({
     fetchProduct: productId => dispatch(fetchProduct(productId))
 })
