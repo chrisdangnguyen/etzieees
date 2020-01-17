@@ -4,6 +4,7 @@ import { fetchAllProducts, fetchCategory } from "../../actions/product_actions"
 
 const mapSTP = state => ({
     products: Object.values(state.entities.products)
+    
         
 });
 

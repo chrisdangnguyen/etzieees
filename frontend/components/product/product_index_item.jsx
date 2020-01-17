@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 
 const ProductIndexItem = ({product}) => {
+    // debugger
+
     return (
         <div className="product-item">
                 <Link to={`/products/${product.id}`}>
@@ -14,6 +16,7 @@ const ProductIndexItem = ({product}) => {
                 <li className="product-price">
                     ${product.price.toFixed(2)}
                 </li>
+                {/* <h2>{user.name}</h2> */}
         </div>
     )
 }
