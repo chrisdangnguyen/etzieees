@@ -21,7 +21,7 @@ Etzieees is a clone of the e-commerce website Etsy, which focuses on unique or h
 * Registered users can create, edit, and delete their products listed. 
 * Browse for current listed products 
 
-![View All Products Page](https://github.com/chrisdangnguyen/Etsy/blob/master/app/assets/images/screenshots/etzieees_homepage.png)
+![View All Products Page](https://github.com/chrisdangnguyen/Etsy/blob/master/app/assets/images/screenshots/etzieees_all_products.png)
 
 
 ## Future Development
