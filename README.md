@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Etzieees
 
-Things you may want to cover:
+Etzieees is a clone of the e-commerce website Etsy, which focuses on unique or handmade creative goods.
 
-* Ruby version
+[Etzieees Live](https://etzieees.herokuapp.com/) is deployed on Heroku.
 
-* System dependencies
 
-* Configuration
+![Etzieees Home Page](https://imgur.com/Bkh65BH)
 
-* Database creation
+## Built with
+* React.js
+* Redux.js
+* Ruby on Rails
+* PostgreSQL
 
-* Database initialization
+## Features 
+* Users can register for an account
+* Users can login and additionally perform user only functionality
+* Registered users can create, edit, and delete their products listed. 
+* Browse for current listed products 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Future Development
+* Functional search bar to filter products
+* Category tabs to filter products by categories
+* Product reviews 
+* User reviews for procducts
+* Shopping cart to shop for products 
 
-* Deployment instructions
 
-* ...
