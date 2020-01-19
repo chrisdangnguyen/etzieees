@@ -19,14 +19,6 @@ class ProductForm extends React.Component {
     //     }
     // }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.match.params.productId != prevProps.product.id) {
-    //         this.props.fetchProduct(this.props.match.params.productId)
-    //             .then(() => { this.setState(this.props.product)}
-    //         );
-    //     }
-    // }
-
    
     update(field) {
         return e => this.setState({

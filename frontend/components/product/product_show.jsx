@@ -11,12 +11,6 @@ class ProductShow extends React.Component {
         this.props.fetchProduct(this.props.match.params.productId)
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     if (prevProps.match.params !== this.props.match.params) {
-    //         this.props.fetchProduct(this.props.match.params.productId);
-    //     }
-    // }
-
 
     render(){
         const { product, seller } = this.props;
@@ -29,7 +23,6 @@ class ProductShow extends React.Component {
                 <div className="show-colum">
                     <div className="show-col-left">
                         <img src={product.photoUrl} className="show-photo"/>
-                        {/* <li>Where reviews will fall under</li> */}
                         <div className="product-description">
                             <div>
                                 {product.description}
