@@ -28,8 +28,8 @@ const App = () => (
         </header>
         <Switch>
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
-            <Route exact path="/products/:productId" component={ProductShowContainer} />
             <Route exact path="/products/:productId/edit" component={EditProductContainer} />
+            <Route exact path="/products/:productId" component={ProductShowContainer} />
             <Route exact path="/products" component={ProductIndexContainer} />
             {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             {/* <Route exact path="/categories/:type" componenent={ProductIndexContainer} /> */}
