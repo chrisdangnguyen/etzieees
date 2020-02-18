@@ -5,17 +5,42 @@ import { withRouter } from 'react-router-dom';
 class ProductForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = Object.assign( {}, { photoFile: null, photoUrl: null} , this.props.product)
+        this.state = Object.assign( {}, { photoFile: null, photoUrl: null}, this.props.product)
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
-        // this.handleDelete = this.handleDelete.bind(this)
-
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleClear = this.handleClear.bind(this);
     }
 
 
-    // componentDidMount() {
-    //     if (this.props.formType === "edit product") {
-    //         this.props.fetchProduct(this.props.match.params.productId);
+    componentDidMount() {
+        if (this.props.fetchProduct) {
+            this.props.fetchProduct(this.props.match.params.productId)
+            .then(() => {
+                this.setState({
+                    title: this.props.product.title,
+                    description: this.props.product.description,
+                    price: this.props.product.price,
+                    category: this.props.product.category,
+                    quantity: this.props.product.quantity,
+                    photoFile: this.props.product.photoFile,
+                    photoUrl: this.props.product.photoUrl,
+                    id: this.props.product.id
+                });
+            });
+        }
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.productId !== prevProps.match.params.productId) {
+            this.props.fetchProduct(this.props.match.params.productId);
+        };
+    };
+
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.match.params.productId !== prevProps.match.params.productId) {
+    //         this.props.fetchProduct(this.props.match.params.productId)
     //     }
     // }
 
@@ -52,10 +77,15 @@ class ProductForm extends React.Component {
             });
     }
 
-    // handleDelete() {
-    //     this.props.deleteProduct(this.props.product.id)
-    //         .then(() => { this.props.history.push('/products')})
-    // }
+    handleClear(e) {
+        e.preventDefault();
+        return this.setState({ photoFile: null, photoUrl: null });
+    }
+
+    handleDelete() {
+        this.props.deleteProduct(this.props.product.id)
+            .then(() => { this.props.history.push('/products')})
+    }
 
     renderErrors() {
         return (
@@ -132,6 +162,7 @@ class ProductForm extends React.Component {
                         <input type="file"
                             onChange={this.handleFile} 
                         />
+                        <button onClick={this.handleClear}>Clear</button>
                         {preview}
                     </div>
 
@@ -141,7 +172,7 @@ class ProductForm extends React.Component {
                     <h2>Listing details</h2>
                     <p>Tell the world all about your item and why they'll love it.</p>
                     <label>Title
-                        <input type="text" value={this.state.title} onChange={this.update("title")}/>
+                        <input type="text" value={this.state.title || ""} onChange={this.update("title")}/>
                     </label>
                     
                     <label className="detail-select">Category
@@ -160,11 +191,11 @@ class ProductForm extends React.Component {
                     </label>
     
                     <label>Quantity
-                            <input type="number" value={this.state.number} onChange={this.update("quantity")}/>
+                            <input type="number" value={this.state.quantity || ""} onChange={this.update("quantity")}/>
                     </label>
 
                     <label>Price
-                        <input type="number" value={this.state.price} 
+                        <input type="number" value={this.state.price || ""} 
                             onChange={this.update("price")} 
                             placeholder="0.00"/>
                     </label>
@@ -172,12 +203,12 @@ class ProductForm extends React.Component {
                     <label>
                         Description
                         <div id="description">
-                            <textarea id="details" value={this.state.description} onChange={this.update("description")}></textarea>
+                            <textarea id="details" value={this.state.description || ""} onChange={this.update("description")}></textarea>
                         </div>
                     </label>
 
                     <div className="submission-buttons">
-                        {/* {deleteButton} */}
+                        {deleteButton}
                         <input type="submit" value="Save and Continue"/>
                     </div>
 

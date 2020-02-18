@@ -15,6 +15,7 @@ const productsReducer = (state = {}, action) => {
         case RECEIVE_PRODUCT:
             nextState[action.product.id] = action.product;
             return nextState;
+            // return Object.assign({}, action.products);
         case REMOVE_PRODUCT:
             delete nextState[action.productId];
             return nextState;

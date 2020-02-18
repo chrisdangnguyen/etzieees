@@ -6,8 +6,8 @@ import { updateProduct, fetchProduct, deleteProduct } from '../../actions/produc
 
 const mapSTP = (state, ownProps) => ({
     product: state.entities.products[ownProps.match.params.productId],
-    userId: state.session.id,
-    errors: state.session.products,
+    // userId: state.currentUser.id,
+    errors: state.errors.products,
     formType: 'Edit product'
 })
 
@@ -16,5 +16,5 @@ const mapDTP = dispatch => ({
     fetchProduct: productId => dispatch(fetchProduct(productId)),
     deleteProduct: productId => dispatch(deleteProduct(productId))
 })
-
+ 
 export default connect(mapSTP, mapDTP)(ProductForm);

@@ -53,7 +53,7 @@ export const updateProduct = product => dispatch => (
     APIUtil.updateProduct(product)
         .then(product => (dispatch(receiveProduct(product))),
             errors => (dispatch(receiveProductErrors(errors.responseJSON)))
-        )
+    )
 );
 
 export const deleteProduct = productId => dispatch => (

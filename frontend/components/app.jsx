@@ -11,6 +11,7 @@ import {
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
 import CreateProductContainer from './product/create_product_container';
+import EditProductContainer from './product/edit_product_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Homepage from './homepage/homepage';
 import Footerbar from './footer/footer';
@@ -28,6 +29,7 @@ const App = () => (
         <Switch>
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
             <Route exact path="/products/:productId" component={ProductShowContainer} />
+            <Route exact path="/products/:productId/edit" component={EditProductContainer} />
             <Route exact path="/products" component={ProductIndexContainer} />
             {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             {/* <Route exact path="/categories/:type" componenent={ProductIndexContainer} /> */}

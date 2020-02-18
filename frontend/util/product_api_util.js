@@ -23,7 +23,9 @@ export const fetchAllProducts = userId => (
     })
 );
 
-export const updateProduct = product => (
+export const updateProduct = product => {
+   
+    return(
     $.ajax({
         method: 'PATCH',
         url: `api/products/${product.id}`,
@@ -31,7 +33,7 @@ export const updateProduct = product => (
         contentType: false,
         processData: false
     })
-);
+)};
 
 export const deleteProduct = productId => (
     $.ajax({
