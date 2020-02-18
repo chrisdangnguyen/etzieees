@@ -11,7 +11,7 @@ export const createProduct = product => (
 export const fetchProduct = productId => (
     $.ajax({
         method: 'GET',
-        url: `api/products/${productId}`,
+        url: `api/products/${productId}`
     })
 );
 
@@ -24,7 +24,6 @@ export const fetchAllProducts = userId => (
 );
 
 export const updateProduct = product => {
-   
     return(
     $.ajax({
         method: 'PATCH',
