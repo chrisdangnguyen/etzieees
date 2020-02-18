@@ -17,8 +17,8 @@ import Homepage from './homepage/homepage';
 import Footerbar from './footer/footer';
 import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
-
-
+import UserShowContainer from './user/user_show_container';
+import UserEditContainer from './user/edit_user_container';
 
 const App = () => (
     <div>
@@ -31,6 +31,8 @@ const App = () => (
             <Route exact path="/products/:productId/edit" component={EditProductContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             <Route exact path="/products" component={ProductIndexContainer} />
+            {/* <Route exact path="/users/:userId" component={UserShowContainer} />
+            <Route exact path="/users/:userId/edit" component={UserEditContainer} /> */}
             {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             {/* <Route exact path="/categories/:type" componenent={ProductIndexContainer} /> */}
             <Route exact path="/" component={Homepage} />
