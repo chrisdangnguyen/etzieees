@@ -24,49 +24,65 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         </div>
 
     );
-    const personalNavbar = () => (
-        <div className="loggedin-navbar">
 
-            <div className="sell-icon">
-                <Link to="/products/new" className="sell-link">
-                    Sell on Etzieees
-                </Link>
-            </div>
 
-            <div className="dropdown-header">
-                <img src={window.images.logo} className="profile-logo"/> 
+    // window.onclick = function (event) {
+    //     if (!event.target.matches('.dropdown-header')) {
+    //         var dropdowns = document.getElementsByClassName("dropdown-content");
+    //         var i;
+    //         for (i = 0; i < dropdowns.length; i++) {
+    //             var openDropdown = dropdowns[i];
+    //             if (openDropdown.classList.contains('show')) {
+    //                 openDropdown.classList.remove('show');
+    //             }
+    //         }
+    //     }
+    // }
 
-               
-               <div className="dropdown-content">
-                   <div className="dropdown-profile">
-                        <Link to='' className="view-link">
-                            <span className="view-profile">
-                             View Profile 
-                            <i className="fa fa-caret-right" aria-hidden="true"></i> 
-                            </span>
-                            <span className="first-name"></span>  
-                            {/* <img src={window.images.logo} />  */}
-                        </Link>
-                   </div>
-                    <div className="dropdown-head">
-                        <a href="#" onClick={logout} className="logout-btn">Sign out</a>
-                    </div>
+
+    const personalNavbar = () => {
+        return (
+            <div className="loggedin-navbar">
+
+                <div className="sell-icon">
+                    <Link to="/products/new" className="sell-link">
+                        Sell on Etzieees
+                    </Link>
                 </div>
 
+                <div className="dropdown-header">
+                    <img src={window.images.logo} className="profile-logo" /> 
+                
+                <div className="dropdown-content" id="myDropdown">
+                    <div className="dropdown-profile">
+                            <Link to={`/users/${currentUser.id}`} className="view-link">
+                                <span className="view-profile">
+                                View Profile 
+                                <i className="fa fa-caret-right" aria-hidden="true"></i> 
+                                </span>
+                                <span className="first-name"></span>  
+                                {/* <img src={window.images.logo} />  */}
+                            </Link>
+                    </div>
+                        <div className="dropdown-head">
+                            <a href="#" onClick={logout} className="logout-btn">Sign out</a>
+                        </div>
+                    </div>
 
 
-            </div> 
 
-            {/* <div className="dropdown-head">
-                <a href="#" onClick={logout} className="logout-btn">Sign out</a>
-            </div> */}
+                </div> 
 
-            <button className="shop-btn-loggedin">
-                <i className="fa fa-shopping-cart"></i>
-            </button>
+                {/* <div className="dropdown-head">
+                    <a href="#" onClick={logout} className="logout-btn">Sign out</a>
+                </div> */}
 
-        </div>
-    );
+                <button className="shop-btn-loggedin">
+                    <i className="fa fa-shopping-cart"></i>
+                </button>
+            </div>
+        )
+    };
 
     const tempSearchBar = (
         <form className="searchbar" action="action_page.php">

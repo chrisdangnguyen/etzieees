@@ -1,3 +1,141 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile {
+  height: 100%;
+  width: 100%;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+
+
+.user-info {
+  width: 55%;
+}
+
+.top-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+  margin-left: 10%;
+  padding-bottom: 25px;
+}
+
+.user-photo {
+  margin: 10px 15% 10px 0px;
+  padding-top: 25px;
+}
+
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 0px 5px 0px;
+}
+
+.profile-header > h1 {
+  font-size: 32px;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif; //"Guardian-EgypTT",serif;
+  font-weight: 200;
+  margin-right: 25px;
+  letter-spacing: 1px;
+}
+
+.user-edit-button {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 40px;
+  text-align: center;
+  padding: 15px;
+}
+
+.user-edit-button:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+.fa, fa-pencil {
+  margin-right: 10px;
+}
+
+.user-city {
+  font-size: 13px;
+  padding: 10px 10px 10px 0px;
+}
+
+.fas, fa-map-marker-alt {
+  margin-right: 10px;
+}
+
+.user-about {
+  font-size: 16px;
+  padding: 15px 10px 10px 0px;
+  letter-spacing: 1px; 
+  font-weight: 200;
+}
+
+.text-listing {
+  border-top: 1px solid grayscale($color: #d3d3d3);
+  border-bottom: 1px solid grayscale($color: #d3d3d3);
+  width: 100%;
+  padding: 18px 25px 18px 45px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+.user-product-container {
+  display: flex;
+  padding: 45px;
+  margin: 15px;
+  // justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.user-product {
+    width: 100%;
+    padding: 0px;
+}
+
+
+.product-item {
+    width: 100%;
+    padding: 0px;
+}
+
+.index-item-image {
+    height: 300px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-title {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: normal;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+
+}
+
+.product-price {
+    line-height: 26px;
+    font-weight: 500;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
