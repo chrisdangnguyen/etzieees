@@ -31,8 +31,8 @@ const App = () => (
             <Route exact path="/products/:productId/edit" component={EditProductContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             <Route exact path="/products" component={ProductIndexContainer} />
-            {/* <Route exact path="/users/:userId" component={UserShowContainer} />
-            <Route exact path="/users/:userId/edit" component={UserEditContainer} /> */}
+            <Route exact path="/users/:userId" component={UserShowContainer} />
+            {/* <Route exact path="/users/:userId/edit" component={UserEditContainer} /> */}
             {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             {/* <Route exact path="/categories/:type" componenent={ProductIndexContainer} /> */}
             <Route exact path="/" component={Homepage} />

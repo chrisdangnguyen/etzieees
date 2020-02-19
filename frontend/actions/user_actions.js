@@ -5,7 +5,7 @@ export const RECEIVE_USER_ERRORS ='RECEIVE_USER_ERRORS';
 
 const receiveUser = user => ({
   type: RECEIVE_USER,
-  user
+  user: user
 });
 
 const receiveUserErrors = errors => ({
@@ -13,12 +13,13 @@ const receiveUserErrors = errors => ({
   errors
 })
 
-export const fecthUser = userId => dispatch => (
+export const fetchUser = userId => dispatch => (
   UserAPIUtil.fetchUser(userId)
     .then(user => dispatch(receiveUser(user)),
       errors => (dispatch(receiveUserErrors(errors.responseJSON)))
     )
 );
+
 
 export const updateUser = user => dispatch => (
   UserAPIUtil.updateUser(user)

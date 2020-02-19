@@ -59,9 +59,9 @@ ActiveRecord::Schema.define(version: 2020_02_18_050928) do
     t.string "name", null: false
     t.string "gender"
     t.string "city"
-    t.string "birth_month"
-    t.string "birth_day"
-    t.string "about"
+    t.integer "birth_month"
+    t.integer "birth_day"
+    t.text "about"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name"
     t.index ["session_token"], name: "index_users_on_session_token", unique: true

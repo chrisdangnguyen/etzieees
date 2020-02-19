@@ -17,8 +17,12 @@ Product.delete_all
 
 #creating user seeds
 
-user1 = User.create!({email: "demo@etzieees.com", name: "Demo", password: "demo123"})
-user2 = User.create!({email: "leathergoods", name: "Pia", password: "asdfghjkl"})
+user1 = User.create!({email: "demo@etzieees.com", name: "Demo", password: "demo123", 
+    city: 'San Francisco', gender: 'male', birth_month: 11, birth_day: 23, 
+    about: 'Hi, I enjoy making custom vintage items and selling them!' })
+user2 = User.create!({email: "leathergoods", name: "Pia", password: "asdfghjkl",
+    city: 'San Francisco', gender: 'male', birth_month: 11, birth_day: 23, 
+    about: 'Hi, I enjoy making custom vintage items and selling them!' })
 user3 = User.create!({email: "76ers4lyfe", name: "James", password: "asdfghjkl"})
 user4 = User.create({email: "vintagestyle", name: "Sam", password: "asdfghjkl"})
 user5 = User.create({email: "mitchup", name: "Mitch", password: "asdfghjkl"})

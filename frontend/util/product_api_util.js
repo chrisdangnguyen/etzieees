@@ -23,6 +23,7 @@ export const fetchAllProducts = userId => (
     })
 );
 
+
 export const updateProduct = product => {
     return(
     $.ajax({
