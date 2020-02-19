@@ -16,8 +16,6 @@ class UserProducts extends React.Component {
 
   render() {
 
-    // if (!this.props.products) return null;
-
     const userProducts = this.props.products.map(product => {
       if (product.user_id !== this.props.userId) {
         return null;
@@ -28,8 +26,10 @@ class UserProducts extends React.Component {
     })
 
     return(
-      <div className="user-product">
-        {userProducts}
+      <div className="user-products">
+        <ul className="product-list">
+          {userProducts}
+        </ul>
       </div>
     )
   }

@@ -1,3 +1,7 @@
+.footer-container {
+    min-width: 1000px;
+}
+
 .footer {
     min-width: 1000px;
     height: 100px;
@@ -43,4 +47,71 @@
 .fa.fa-github {
     font-size: 40px;
     padding: 10px;
+}
+
+.footer-info {
+    padding: 50px 15% 50px 50px;
+    background-color: rgb(47, 70, 108);
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 13px;
+    color: white;
+    list-style-type: none;
+}
+
+.footer-info  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+
+.footer-info li {
+    padding: 6px 0px;
+    font-weight: 200;
+}
+
+.wt-fill-denim {
+    fill: #2F466C !important;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding-top: 24px;
+}
+
+.footer-about-icons {
+    padding-top: 15%;
+}
+
+.footer-etsy-icon {
+    height: 24px;
+    width: 24px;
+    fill: white;
+    padding-right: 5px;
+}
+
+.footer-icon-text {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+
+}
+
+.footer-etsy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 10px;
+    border: 2px solid white;
+    border-radius: 40px;
+}
+
+.footer-info-icon {
+    padding-top: 18px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
 }

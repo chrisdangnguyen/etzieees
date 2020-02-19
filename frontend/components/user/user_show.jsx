@@ -67,11 +67,9 @@ class UserShow extends React.Component {
           Lists
         </div>
 
-        <div className="user-product-container">
-          <div className="product-list">
-            <UserProducts userId={user.id} />
-          </div>
-        </div>
+  
+        <UserProducts userId={user.id} />
+  
 
       </div>
       // <div>Hello User Show</div>

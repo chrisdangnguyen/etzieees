@@ -1,5 +1,7 @@
 import React from 'react';
 import Slideshow from '../slideshow/slideshow';
+import HomeProducts from '../product/home_products_container';
+
 
 
 const homePage = () => {
@@ -39,6 +41,8 @@ const homePage = () => {
     );
 
 
+
+
     return (
         <div className="homepage">
             <h2>If it's handcrafted, vintage, custom, or unique, it's on Etzieees.</h2>
@@ -70,6 +74,12 @@ const homePage = () => {
                     <p>We use best-in-class technology to protect your transactions.</p>
                 </li>
             </div>
+            
+            <div className="home-products">
+                    <h1>Popular right now</h1>
+                    <HomeProducts />
+            </div>
+
             {aboutHome}
         </div>
     );
