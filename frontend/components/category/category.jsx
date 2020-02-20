@@ -5,14 +5,14 @@ class Category extends React.Component {
     render() {
         return(
             <div className="categories">
-                <Link to="/categories/jewelry&accessories">Jewelry & Accessories</Link>
-                <Link to="/categories/clothing&shoes"> Clothing & Shoes</Link>
-                <Link to="/categories/home&living">Home & Living</Link>
-                <Link to="/categories/wedding&party">Wedding & Party</Link>
-                <Link to="/categories/toys&entertainment">Toys & Entertainment</Link>
-                <Link to="/categories/art&collectibles">Art & Collectibles</Link>
-                <Link to="/categories/craftsupplies">Craft Supplies</Link>
-                <Link to="/categories/vintage">Vintage</Link>
+                <Link to="/category/jewelry&accessories">Jewelry & Accessories</Link>
+                <Link to="/category/clothing&shoes"> Clothing & Shoes</Link>
+                <Link to="/category/home&living">Home & Living</Link>
+                <Link to="/category/wedding&party">Wedding & Party</Link>
+                <Link to="/category/toys&entertainment">Toys & Entertainment</Link>
+                <Link to="/category/art&collectibles">Art & Collectibles</Link>
+                <Link to="/category/craftsupplies">Craft Supplies</Link>
+                <Link to="/category/vintage">Vintage</Link>
                 <Link to="/products">View All</Link>
             </div>
         );
@@ -20,4 +20,4 @@ class Category extends React.Component {
 
 };
 
-export default Category; //check withrouter if this is okay to export later when implmenting logic 
+export default withRouter(Category); //check withrouter if this is okay to export later when implmenting logic 

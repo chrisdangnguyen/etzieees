@@ -46,7 +46,7 @@ export const deleteProduct = productId => (
 export const fetchCategory = type => (
     $.ajax({
         method: 'GET',
-        url: 'api/categories',
+        url: "api/products/category",
         data: { category: { type }}
     })
 );

@@ -181,12 +181,12 @@ class ProductForm extends React.Component {
                                 value={this.state.category}
                                 onChange={this.update("category")}>
                                 <option value="default">--Select a Category--</option>
-                                <option value="jewelry & accessories">Jewelry & Accessories</option>
-                                <option value="clothings & shoes">Clothings & Shoes</option>
-                                <option value="home & living">Home & Living</option>
-                                <option value="toys & entertainment">Toys & Entertainment</option>
-                                <option value="art & collectibles">Art & Collectibles</option>
-                                <option value="craft supplies">Craft Supplies</option>
+                                <option value="jewelry&accessories">Jewelry & Accessories</option>
+                                <option value="clothing&shoes">Clothing & Shoes</option>
+                                <option value="home&living">Home & Living</option>
+                                <option value="toys&entertainment">Toys & Entertainment</option>
+                                <option value="art&collectibles">Art & Collectibles</option>
+                                <option value="craftsupplies">Craft Supplies</option>
                                 <option value="vintage">Vintage</option>
                             </select>
                     </label>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import ProductIndexItem from './product_index_item';
 
 
@@ -8,7 +9,13 @@ class ProductIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.action()
+        this.props.action();
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.category !== this.props.category) {
+            this.props.action();
+        }
     }
 
 
@@ -39,4 +46,4 @@ class ProductIndex extends React.Component {
     }
 }
 
-export default ProductIndex;
+export default withRouter(ProductIndex);

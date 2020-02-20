@@ -1,10 +1,9 @@
 
 .homepage h2 {
     display: block;
-    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
-    font-size: 32px;
+    font-family: "Guardian-EgypTT",serif;    font-size: 32px;
     color: black;
-    font-weight: 300;
+    font-weight: 100;
     box-sizing: border-box;
     height: 78px;
     -webkit-font-smoothing: antialiased;
@@ -82,11 +81,12 @@
 .about-home-container h2 {
     box-sizing: border-box;
     font-size: 44px;
-    font-weight: 300;
+    font-weight: 100;
     text-size-adjust: 100%;
     text-align: center;
     line-height: 48px;
     padding: 0px;
+    font-family: "Guardian-EgypTT",serif;
 }
 
 .about-list {
@@ -106,6 +106,7 @@
     text-align: center;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 12px;
+    font-family: "Guardian-EgypTT",serif;
 }
 
 .about-list li {
@@ -123,8 +124,9 @@
     text-align: center;
     margin: 24px;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 400;
     text-size-adjust: 100%;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
 }
 
 .home-products {

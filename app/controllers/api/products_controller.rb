@@ -39,10 +39,19 @@ class Api::ProductsController < ApplicationController
         end
     end
 
+    def category
+        @products = Product.where(category: category_params[:type])
+        render :index
+    end
+
     private 
 
     def product_params
         params.require(:product).permit(:id, :title, :description, :price, :user_id, :quantity, :category, :photo)
+    end
+
+    def category_params 
+        params.require(:category).permit(:type)
     end
 
 end
