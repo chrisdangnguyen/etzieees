@@ -113,6 +113,7 @@ class ProductForm extends React.Component {
         }
     }
 
+
     render() {
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className="photo-preview" /> : null;
 

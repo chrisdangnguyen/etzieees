@@ -50,7 +50,6 @@ class UserShow extends React.Component {
         <div className="top-profile">
           <div className="user-photo">
               <img className="profile-pic" src={user.photoUrl} />
-              pic
           </div>
 
           <div className="user-info">
@@ -72,7 +71,6 @@ class UserShow extends React.Component {
   
 
       </div>
-      // <div>Hello User Show</div>
     ) 
   }
 }
