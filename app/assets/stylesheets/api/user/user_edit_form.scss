@@ -1,0 +1,183 @@
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  // border: 1px solid red;
+  padding: 0px;
+  vertical-align: middle;
+  margin:0 auto;
+  font-size: 16px;
+  font-family: "Graphik Webfont", -apple-system, system-ui, Roboto, "Droid Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+
+}
+
+.profile-photo-preview {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  margin-left: 0 auto;
+  margin-left: 19%;
+  margin-bottom: 15px;
+}
+
+.user-profile-header {
+  padding: 30px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prof-header {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Graphik Webfont", -apple-system, system-ui, Roboto, "Droid Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.view-button {
+  width: 100px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 3px;
+  font-weight: 400px;
+}
+
+.view-button:hover {
+  background-color: grayscale($color: #e0e0e0);
+  text-decoration: underline;
+}
+
+.profile-para {
+  margin-left: 12px;
+  font-size: 16px;
+  line-height: 20px;
+  text-size-adjust: 100%;
+  color: rgb(117, 117, 117);
+  padding-bottom: 20px;
+}
+
+.user-bottom-section {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 11px;
+}
+
+.profile-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 15px 0px;
+}
+
+.profile-picture {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+}
+
+.profile-picture > h2{
+  width: 150px;
+  text-align: right;
+  float: left;
+  margin-top: 6px;
+  margin-right: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  height: 14px;
+  padding-bottom: 15px;
+}
+
+.profile-picture > input{
+  width: 200px;
+  text-align: start;
+  margin-top: 8px;
+  margin-left: 23px;
+  font-size: 12px;
+  font-weight: 400;
+  height: 18px;
+  padding-bottom: 15px;
+}
+
+.profile-image {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.profile-image > p {
+  font-size: 12px;
+  margin: 0px 15%;
+  word-wrap: break-word;
+  color: rgb(51, 51, 51);
+}
+
+.name-container, .gender-input, .city-container, .birth-container {
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.profile-name, .gender-name, .city-container > label, .birth-date,
+.user-about-container > label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+#birth-month {
+  margin-right: 2px;
+}
+
+.name-container > input, .city-container > input {
+  padding-left: 5px;
+  height: 20px;
+  border: 1px solid #959595;
+}
+
+.gender-input > label {
+  padding: 0px 10px 2px 2px;
+  font-size: 12px;
+}
+
+.user-about-container {
+  padding: 15px 0px 5px 0px;
+}
+
+.profile-about {
+  display: inline-block;
+  height: 46px;
+  width: 278px;
+  padding: 6px;
+  text-align: start;
+  font-weight: 400;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border: 1px solid #959595;
+  line-height: 16px;
+  vertical-align: middle; 
+  white-space: pre-wrap;
+}
+
+.user-about-container > p {
+  font-size: 12px;
+  margin: 10px 15% 0px 12%;
+  word-wrap: break-word;
+  color: rgb(51, 51, 51);
+}
+
+.profile-submit {
+  margin-left: 135px;
+  color: white;
+  background-color: rgb(34, 34, 34);
+  height: 34px;
+  width: 135px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+
