@@ -18,7 +18,7 @@ import Footerbar from './footer/footer';
 import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
 import UserShowContainer from './user/user_show_container';
-// import UserEditContainer from './user/edit_user_container';
+import UserEditContainer from './user/edit_user_container';
 
 const App = () => (
     <div>
@@ -33,7 +33,7 @@ const App = () => (
             <Route exact path="/products" component={ProductIndexContainer} />
             <Route path="/category/:category" component={ProductIndexContainer} />
             <Route exact path="/users/:userId" component={UserShowContainer} />
-            {/* <Route exact path="/users/:userId/edit" component={UserEditContainer} /> */}
+            <Route exact path="/users/:userId/edit" component={UserEditContainer} />
             {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             <Route exact path="/" component={Homepage} />
         </Switch>

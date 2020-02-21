@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class ProductForm extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = Object.assign( {}, { photoFile: '', photoUrl: ''}, this.props.product)
+        this.state = Object.assign( {}, { photoFile: '', photoUrl: ''}, this.props.product)
         this.state = this.props.product;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
