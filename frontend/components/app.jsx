@@ -33,7 +33,7 @@ const App = () => (
             <Route exact path="/products" component={ProductIndexContainer} />
             <Route path="/category/:category" component={ProductIndexContainer} />
             <Route exact path="/users/:userId" component={UserShowContainer} />
-            <Route exact path="/users/:userId/edit" component={UserEditContainer} />
+            {/* <Route exact path="/users/:userId/edit" component={UserEditContainer} /> */}
             {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             <Route exact path="/" component={Homepage} />
         </Switch>
