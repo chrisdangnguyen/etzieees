@@ -40,7 +40,11 @@ const Navbar = ({ currentUser, logout, openModal }) => {
     // }
 
 
-    const personalNavbar = () => {
+    const personalNavbar = (user) => {
+        const preview = currentUser.photoUrl ?
+            <img src={currentUser.photoUrl} className="profile-logo" /> : 
+            <img src={window.images.logo} className="profile-logo" /> 
+
         return (
             <div className="loggedin-navbar">
 
@@ -54,7 +58,8 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 </div>
 
                 <div className="dropdown-header">
-                    <img src={window.images.logo} className="profile-logo" /> 
+                    {/* <img src={window.images.logo} className="profile-logo" />  */}
+                    {preview}
                     <p className="profile-text">You 
                         <i className="fa fa-caret-down" aria-hidden="true"></i> 
                     </p>

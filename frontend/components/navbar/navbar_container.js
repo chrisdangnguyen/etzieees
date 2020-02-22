@@ -6,7 +6,8 @@ import { fetchCategory } from '../../actions/product_actions'
 
 const mapStateToProps = ({ session, entities: { users } }) => {
     return {
-        currentUser: users[session.id]
+        currentUser: users[session.id],
+        // user: users[session.id]
     };
 };
 

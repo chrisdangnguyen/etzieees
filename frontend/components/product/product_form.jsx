@@ -176,6 +176,7 @@ class ProductForm extends React.Component {
                     <label>Title
                         <input type="text" value={this.state.title} onChange={this.update("title")}/>
                     </label>
+                    {/* <p>Include keywords that buyers would use to search for your item.</p> */}
                     
                     <label className="detail-select">Category
                             <select id="category" 
@@ -195,8 +196,10 @@ class ProductForm extends React.Component {
                     <label>Quantity
                             <input type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
                     </label>
+                    {/* <p>For quantities greater than one, this listing will renew automatically until it sells out. You’ll be charged a $0.20 USD listing fee each time.</p> */}
 
                     <label>Price
+                        {/* <p>Factor in the costs of materials and labor, plus any related business expenses. Consider the total price buyers will pay too—including shipping.</p> */}
                         <input type="number" value={this.state.price} 
                             onChange={this.update("price")} 
                             placeholder="0.00"/>
@@ -208,6 +211,13 @@ class ProductForm extends React.Component {
                             <textarea id="details" value={this.state.description} onChange={this.update("description")}></textarea>
                         </div>
                     </label>
+                        {/* <p>Start with a brief overview that describes your item’s 
+                            finest features. Shoppers will only see the first few 
+                            lines of your description at first, so make it count!
+                            Not sure what else to say? Shoppers also like 
+                            hearing about your process, and the story behind 
+                            this item.
+                        </p> */}
 
                     <div className="submission-buttons">
                         {deleteButton}

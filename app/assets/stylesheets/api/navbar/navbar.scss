@@ -213,9 +213,10 @@
 .profile-logo {
     display: inline-block;
     height: 30px;
-    width: auto;
-    border-radius: 20px;
+    width: 30px;
+    border-radius: 50%;
     padding-bottom: 2px;
+    object-fit: cover;
 }
 
 .dropdown-header {
