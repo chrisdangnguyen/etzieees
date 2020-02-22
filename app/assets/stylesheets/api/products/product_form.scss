@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 28%;
+    width: 29%;
     margin-right: 0px;
 }
 
@@ -86,17 +86,26 @@
 
 #details{
     width: 100%;
-    height: 100%;
-    border: 1px solid rgb(238, 238, 238);;
+    height: 40px;
+    border: 1px solid rgb(238, 238, 238);
+    padding: 0px 0px 0px 5px;
 }
 
 .detail-container {
     color: black;
 }
 
-.product-form input {
+// .product-form input {
+//     width: 80%;
+//     padding: 0px;
+//     border: 1px solid rgb(223, 221, 221);
+//     height:  40px;
+//     border-radius: 2px;
+// }
+
+.title-input, .quantity-input, .price-input {
     width: 80%;
-    padding: 0px;
+    padding: 0px 0px 0px 5px;
     border: 1px solid rgb(223, 221, 221);
     height:  40px;
     border-radius: 2px;
@@ -104,14 +113,13 @@
 
 .product-form #description{
     width: 80%;
-    border: 1px solid rgb(223, 221, 221);
+    // border: 1px solid rgb(223, 221, 221);
     border-radius: 2px;
 }
 
 #category {
     width: 150px;
 }
-
 
 .submission-buttons {
     display: flex;
@@ -131,9 +139,6 @@
     cursor: pointer;
 }
 
-
-
-
 .submission-buttons > button {
     width: 150px;
     margin-right: 10px;
@@ -144,3 +149,25 @@
     font-size: 14px;
     line-height: 16px;
 }
+
+.upload-container {
+    height: 35vh;
+    width: 35%;
+    margin-top: 15px;
+    border: 1px solid rgb(223, 221, 221);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.new-photo-container {
+    padding-left: 5px;
+}
+
+.photo-preview {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#details:focus {outline:0;}

@@ -16,10 +16,10 @@ const ProductIndexItem = ({product}) => {
                 <li className="product-title">
                     {product.title}
                 </li>   
+                <p id="product-seller">{product.seller.name}</p>
                 <li className="product-price">
                     ${product.price.toFixed(2)}
                 </li>
-                {/* <h2>{product.seller.name}</h2> */}
         </div>
     )
 }

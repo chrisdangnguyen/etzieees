@@ -75,10 +75,19 @@ const footerBar = () => {
                         Made by Chris Nguyen
                     </li>
                     <li>
-                        <i className="fa fa-linkedin-square"></i>
+                        <a href="https://www.linkedin.com/in/chris-nguyen-84b0261a1/">
+                            <i className="fa fa-linkedin-square"></i>
+                        </a>
                     </li>
                     <li>
-                        <i className="fa fa-github"></i>
+                        <a href="https://github.com/chrisdangnguyen">
+                            <i className="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://angel.co/justin-fernandez-3" target="_blank">
+                            <i className="fa fa-angellist"></i>
+                        </a>
                     </li>
                 </div>
 

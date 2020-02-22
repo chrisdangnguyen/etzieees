@@ -160,9 +160,10 @@ class ProductForm extends React.Component {
                     </div>
 
 
-                    <div>
+                    <div className="upload-container">
                         <input type="file"
-                            onChange={this.handleFile} 
+                            onChange={this.handleFile}
+                            className="new-photo-container" 
                         />
                         <button onClick={this.handleClear}>Clear</button>
                         {preview}
@@ -174,7 +175,7 @@ class ProductForm extends React.Component {
                     <h2>Listing details</h2>
                     <p>Tell the world all about your item and why they'll love it.</p>
                     <label>Title
-                        <input type="text" value={this.state.title} onChange={this.update("title")}/>
+                        <input className="title-input" type="text" value={this.state.title} onChange={this.update("title")}/>
                     </label>
                     {/* <p>Include keywords that buyers would use to search for your item.</p> */}
                     
@@ -194,13 +195,13 @@ class ProductForm extends React.Component {
                     </label>
     
                     <label>Quantity
-                            <input type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
+                            <input className="quantity-input" type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
                     </label>
                     {/* <p>For quantities greater than one, this listing will renew automatically until it sells out. You’ll be charged a $0.20 USD listing fee each time.</p> */}
 
                     <label>Price
                         {/* <p>Factor in the costs of materials and labor, plus any related business expenses. Consider the total price buyers will pay too—including shipping.</p> */}
-                        <input type="number" value={this.state.price} 
+                        <input className="price-input" type="number" value={this.state.price} 
                             onChange={this.update("price")} 
                             placeholder="0.00"/>
                     </label>
@@ -208,7 +209,8 @@ class ProductForm extends React.Component {
                     <label>
                         Description
                         <div id="description">
-                            <textarea id="details" value={this.state.description} onChange={this.update("description")}></textarea>
+                            <textarea id="details" value={this.state.description} 
+                            onChange={this.update("description")}></textarea>
                         </div>
                     </label>
                         {/* <p>Start with a brief overview that describes your item’s 

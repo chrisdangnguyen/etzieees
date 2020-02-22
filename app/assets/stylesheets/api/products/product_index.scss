@@ -28,8 +28,6 @@
     border-radius: 15px;
 }
 
-
-
 .product-title {
     font-size: 14px;
     line-height: 22px;
@@ -37,7 +35,20 @@
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: 100%;
+    color: black
 
+}
+
+#product-seller {
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: normal;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: rgb(89, 89, 89);;
 }
 
 .product-price {
