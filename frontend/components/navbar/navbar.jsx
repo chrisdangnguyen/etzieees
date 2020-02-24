@@ -58,7 +58,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 </div>
 
                 <div className="dropdown-header">
-                    {/* <img src={window.images.logo} className="profile-logo" />  */}
                     {preview}
                     <p className="profile-text">You 
                         <i className="fa fa-caret-down" aria-hidden="true"></i> 
@@ -99,8 +98,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
     };
 
     const tempSearchBar = (
-        <form className="searchbar" action="action_page.php">
-            <input type="text" placeholder="Search for items or shops" 
+        // action_page.php
+        <form className="searchbar" action="/search">  
+            <input type="text" placeholder="Search for items" 
             name="search"/>
                 <button type="submit"><i className="fa fa-search"></i></button>
         </form>
@@ -116,9 +116,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                         <Link to="/" className="header-link">
                             <h1 className="logo-name">Etzieees</h1>
                         </Link>
-                        <form className="searchbar" action="action_page.php">
-                            <input type="text" placeholder="Search for items or shops"
-                                name="search" />
+                        <form className="searchbar" action="/search">
+                            <input type="text" placeholder="Search for items"
+                                name="q" />
                             <button type="submit" className="searchbutton"><i className="fa fa-search"></i></button>
                         </form>
                     </div>

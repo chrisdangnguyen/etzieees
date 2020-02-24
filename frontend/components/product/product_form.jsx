@@ -92,7 +92,7 @@ class ProductForm extends React.Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li key={`error-${i}`} className="product-errors">
                         {error}
                     </li>
                 ))}
@@ -132,7 +132,9 @@ class ProductForm extends React.Component {
         return (
             <div className="product-form">
                 <h1>{header}</h1>
-                {/* {this.renderErrors()} */}
+                <div className="product-errors">
+                {this.renderErrors()}
+                </div>
                 <div className="photo-container">
                     <div className="photo-info">
                         <h2>Photos</h2>
@@ -168,7 +170,6 @@ class ProductForm extends React.Component {
                         <button onClick={this.handleClear}>Clear</button>
                         {preview}
                     </div>
-
                 </div>
 
                 <form className="detail-container" onSubmit={this.handleSubmit}>

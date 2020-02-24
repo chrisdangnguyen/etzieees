@@ -74,4 +74,10 @@ export const fetchUserProducts = userId => dispatch => (
             errors => (dispatch(receiveProductErrors(errors.responseJSON)))
     )
 )
+
+export const fetchSearchProducts = query => dispatch => (
+    APIUtil.fetchSearchProducts(query)
+        .then(products => dispatch(receiveAllProducts(products)),
+    )
+)
         

@@ -50,3 +50,11 @@ export const fetchCategory = type => (
         data: { category: { type }}
     })
 );
+
+export const fetchSearchProducts = query => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/products/search',
+        data: {query}
+    })
+)
