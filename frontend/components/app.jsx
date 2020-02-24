@@ -31,6 +31,7 @@ const App = () => (
             <Route exact path="/products/:productId/edit" component={EditProductContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             <Route exact path="/products" component={ProductIndexContainer} />
+            <Route path="/search" component={ProductIndexContainer} />
             <Route path="/category/:category" component={ProductIndexContainer} />
             <Route exact path="/users/:userId" component={UserShowContainer} />
             <Route exact path="/users/:userId/edit" component={UserEditContainer} />

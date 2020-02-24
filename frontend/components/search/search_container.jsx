@@ -1,14 +1,15 @@
-import { connect } from "react-dom";
-import { fetchSearchProducts } from "../../actions/product_actions";
-import SearchBar from "./search";
+import SearchBar from './search';
+import { connect } from 'react-redux';
+import { fetchSearchProducts } from '../../actions/product_actions';
 
-const mapSTP = () => ({
-
-});
-
-const mapDTP = () => ({
+const mapSTP = state => ({
 
 })
 
-export default connect(mapSTP, mapDTP)(SearchBar);
+const mapDTP = (dispatch) => {
+  return {
+    fetchSearchProducts: (query) => dispatch(fetchSearchProducts(query))
+  }
+}
 
+export default connect(mapSTP, mapDTP)(SearchBar);

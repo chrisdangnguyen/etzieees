@@ -4,6 +4,8 @@ export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export const RECEIVE_PRODUCT_ERRORS = 'RECEIVE_PRODUCT_ERRORS';
+// export const RECEIVE_SEARCH_PRODUCTS = 'RECEIVE_SEARCH_PRODUCTS';
+// export const RECEIVE_PRODUCT_SEARCH = "RECEIVE_PRODUCT_SEARCH";
 
 // receive errors
 
@@ -26,6 +28,18 @@ const receiveProductErrors = errors => ({
     type: RECEIVE_PRODUCT_ERRORS,
     errors
 })
+
+// const receiveSearchProducts = results => ({
+//     type: RECEIVE_PRODUCT_SEARCH,
+//     results
+// })
+
+const receiveProductSearch = (results) => {
+    return {
+        type: RECEIVE_PRODUCT_SEARCH,
+        results
+    }
+}
 
 export const createProduct = product => dispatch => (
     APIUtil.createProduct(product)
@@ -80,4 +94,3 @@ export const fetchSearchProducts = query => dispatch => (
         .then(products => dispatch(receiveAllProducts(products)),
     )
 )
-        

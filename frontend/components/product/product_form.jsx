@@ -236,10 +236,6 @@ class ProductForm extends React.Component {
                     </div>
 
 
-
-
-
-
                     <div className="submission-buttons">
                         {deleteButton}
                         <input type="submit" value="Save and Continue"/>

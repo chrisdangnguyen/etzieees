@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { render } from 'react-dom';
-import Category from '../category/category'
+import Category from '../category/category';
+import SearchBar from '../search/search_container';
 
 
 
@@ -97,15 +97,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         )
     };
 
-    const tempSearchBar = (
-        // action_page.php
-        <form className="searchbar" action="/search">  
-            <input type="text" placeholder="Search for items" 
-            name="search"/>
-                <button type="submit"><i className="fa fa-search"></i></button>
-        </form>
-    );
-
     const greeting = currentUser ? personalNavbar() : sessionLinks();
 
     return(
@@ -116,11 +107,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                         <Link to="/" className="header-link">
                             <h1 className="logo-name">Etzieees</h1>
                         </Link>
-                        <form className="searchbar" action="/search">
-                            <input type="text" placeholder="Search for items"
-                                name="q" />
-                            <button type="submit" className="searchbutton"><i className="fa fa-search"></i></button>
-                        </form>
+                        <SearchBar />
                     </div>
                     <div className="navbar-right">
                         {greeting}
