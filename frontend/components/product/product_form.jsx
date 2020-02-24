@@ -174,52 +174,70 @@ class ProductForm extends React.Component {
                 <form className="detail-container" onSubmit={this.handleSubmit}>
                     <h2>Listing details</h2>
                     <p>Tell the world all about your item and why they'll love it.</p>
-                    <label>Title
-                        <input className="title-input" type="text" value={this.state.title} onChange={this.update("title")}/>
-                    </label>
-                    {/* <p>Include keywords that buyers would use to search for your item.</p> */}
-                    
-                    <label className="detail-select">Category
-                            <select id="category" 
-                                value={this.state.category}
-                                onChange={this.update("category")}>
-                                <option value="default">--Select a Category--</option>
-                                <option value="jewelry&accessories">Jewelry & Accessories</option>
-                                <option value="clothing&shoes">Clothing & Shoes</option>
-                                <option value="home&living">Home & Living</option>
-                                <option value="toys&entertainment">Toys & Entertainment</option>
-                                <option value="art&collectibles">Art & Collectibles</option>
-                                <option value="craftsupplies">Craft Supplies</option>
-                                <option value="vintage">Vintage</option>
-                            </select>
-                    </label>
-    
-                    <label>Quantity
-                            <input className="quantity-input" type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
-                    </label>
-                    {/* <p>For quantities greater than one, this listing will renew automatically until it sells out. You’ll be charged a $0.20 USD listing fee each time.</p> */}
 
-                    <label>Price
-                        {/* <p>Factor in the costs of materials and labor, plus any related business expenses. Consider the total price buyers will pay too—including shipping.</p> */}
+                    <div className="title-container">
+                        <div className="title-para">
+                            <label>Title</label>
+                            <p>Include keywords that buyers would use to search for your item.</p>
+                        </div>
+                        <input className="title-input" type="text" value={this.state.title} onChange={this.update("title")}/>
+                    </div>
+                    
+                    <div className="category-container">
+                        <div className="category-para">
+                            <label>Category</label>
+                        </div>
+                        <select id="category" 
+                            value={this.state.category}
+                            onChange={this.update("category")}>
+                            <option value="default">--Select a Category--</option>
+                            <option value="jewelry&accessories">Jewelry & Accessories</option>
+                            <option value="clothing&shoes">Clothing & Shoes</option>
+                            <option value="home&living">Home & Living</option>
+                            <option value="toys&entertainment">Toys & Entertainment</option>
+                            <option value="art&collectibles">Art & Collectibles</option>
+                            <option value="craftsupplies">Craft Supplies</option>
+                            <option value="vintage">Vintage</option>
+                        </select>
+                    </div>      
+
+                    <div className="quantity-container">
+                        <div className="quantity-para">
+                            <label>Quantity</label>
+                            <p>For quantities greater than one, this listing will renew automatically until it sells out. You’ll be charged a $0.20 USD listing fee each time.</p>
+                        </div>
+                        <input className="quantity-input" type="number" value={this.state.quantity} onChange={this.update("quantity")}/>
+                    </div>
+
+                    <div className="price-container">
+                        <div className="price-para">
+                            <label>Price</label>
+                            <p>Factor in the costs of materials and labor, plus any related business expenses. Consider the total price buyers will pay too—including shipping.</p>
+                        </div>
                         <input className="price-input" type="number" value={this.state.price} 
                             onChange={this.update("price")} 
                             placeholder="0.00"/>
-                    </label>
+                    </div>
 
-                    <label>
-                        Description
-                        <div id="description">
-                            <textarea id="details" value={this.state.description} 
-                            onChange={this.update("description")}></textarea>
+                    <div id="description">
+                        <div className="description-para">
+                            <label>Description</label>
+                            <p>Start with a brief overview that describes your item’s 
+                                finest features. Shoppers will only see the first few 
+                                lines of your description at first, so make it count!
+                                <br /> <br /> Not sure what else to say? Shoppers also like 
+                                hearing about your process, and the story behind 
+                                this item.
+                            </p>
                         </div>
-                    </label>
-                        {/* <p>Start with a brief overview that describes your item’s 
-                            finest features. Shoppers will only see the first few 
-                            lines of your description at first, so make it count!
-                            Not sure what else to say? Shoppers also like 
-                            hearing about your process, and the story behind 
-                            this item.
-                        </p> */}
+                        <textarea id="details" value={this.state.description} 
+                        onChange={this.update("description")}></textarea>
+                    </div>
+
+
+
+
+
 
                     <div className="submission-buttons">
                         {deleteButton}
