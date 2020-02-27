@@ -2,30 +2,115 @@
     display: flex;
     padding-top: 30px;
     list-style-type: none;
+    padding: 40px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+
 }
 
-.show-colum {
+.show-column {
     display: flex;
     justify-content: center;
 }
 
-.show-col-right {
-    display: flex;
-    padding: 0px 75px 0px 75px;;
-    width: 60%;
-}
+
 .show-photo{
-    max-width: 500px;
-    max-height: 650px;
+    min-width: 600px;
+    max-height: 800px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
 }
 
 .show-col-left {
-    padding: 0px 75px 0px 75px;
+    padding: 0px 50px 0px 100px;
+}
+
+
+.show-item-review {
+    padding-top: 20px;
+}
+
+
+.show-col-right {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px 0px 50px;;
+    width: 60%;
 }
 
 .product-info{
     display: flex;
     flex-direction: column;
-    
 }
+
+.show-user-name {
+    color: #757575;
+    font-size: 14px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.show-user-name:hover {
+    text-decoration: underline;
+}
+
+.show-title {
+    font-family: "Guardian-EgypTT",serif;  
+    width: 70%;  
+    word-wrap: break-word;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.show-price {
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.show-quantity {
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.quantity-container {
+    padding-top: 6px;
+}
+
+.product-to-cart {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.cart-button-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    width: 70%;
+}
+
+.product-to-cart:hover {
+    background: grayscale($color: #797878);
+
+}
+
+.product-description {
+    padding-top: 20px;
+    width: 70%;
+    font-size: 14px;
+    font-weight: 300;
+    overflow-wrap: break-word;
+    line-height: 22px;
+}
+ 
+
 

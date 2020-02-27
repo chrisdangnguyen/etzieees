@@ -5,15 +5,14 @@ import { fetchProduct } from '../../actions/product_actions';
 
 const mapSTP = (state, ownProps) => {
     let product = state.entities.products[ownProps.match.params.productId] 
-    let seller;
-    if (product) {
-        seller = state.entities.users[product.user_id]
-    } 
+    // let seller;
+    // if (product) {
+    //     seller = state.entities.users[product.user_id]
+    // } 
 
     return ({
         product: product,
         userId: state.session.id,
-        seller: seller
     })
 }
 
