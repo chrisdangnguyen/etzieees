@@ -57,3 +57,44 @@
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 }
+
+
+.product-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.edit-item-button {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 25px;
+}
+
+.edit-item-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.edit-item-button:hover {
+    background-color: grayscale($color: #797878);
+}
+
+.no-search-container {
+    height: 20vh;
+}
+
+.no-search{
+    font-size: 28px;
+    font-family: "Guardian-EgypTT",serif;  
+    font-weight: 100; 
+}
+ 
+

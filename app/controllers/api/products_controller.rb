@@ -1,3 +1,4 @@
+
 class Api::ProductsController < ApplicationController
     before_action :require_logged_in, only: [:create, :update, :destroy]
 
@@ -22,9 +23,11 @@ class Api::ProductsController < ApplicationController
 
     def update
         @product = Product.find_by(id: params[:id])
-
-        if @product.update(product_params) ## need to the option to update photos
-            render :show # difference between this and render :show --check
+        # if params[:photo]
+        #     @product.photo.purge
+        # end
+        if @product.update(product_params)
+            render :show
         else
             render json: @product.errors.full_messages, status: 422
         end

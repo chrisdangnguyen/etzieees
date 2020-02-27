@@ -24,22 +24,39 @@ class ProductIndex extends React.Component {
         if (!this.props.products) {
             return null;
         }
-        
-        // console.log(this.props.products)
-        const {products} = this.props;
 
+        
+        let products = this.props.products.map(product => {
+            return (
+                    <ProductIndexItem
+                    product={product}
+                    key={product.id}
+                    currentUserId={this.props.currentUser.id}
+                    userid={this.props.userid}
+                    />
     
 
+                )
+            }
+            ) ;
+            
+        if (products.length === 0) {
+            products = (
+                <div className="no-search-container">
+                    <div className="no-search">
+                        <div>Looks like we don't have any here
+                            <br/> <br/>
+                            Try searching for something else instead?
+                        </div>
+                    </div>
+                </div>
+            )
+        }
 
         return (
             <div className="product-index-container">
                 <div className="product-list">
-                    {products.map(product => <ProductIndexItem
-                                                product={product}
-                                                key={product.id}
-                                                />
-                                )
-                    }
+                    {products}
                 </div>
             </div>
         )

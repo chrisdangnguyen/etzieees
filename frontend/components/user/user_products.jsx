@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import ProductIndexItem from '../product/product_index_item';
 // import ProductIndexItem from '../product/product_index_item';
 
@@ -21,9 +21,16 @@ class UserProducts extends React.Component {
         return null;
       }
       return (
-        <ProductIndexItem key={product.id} product={product} />
+        <div>
+          <ProductIndexItem key={product.id} product={product} user={this.props.userId} userid = {this.props.userid} />
+        </div>
       )
     })
+
+    // const finalProducts = userProducts.map( product => {
+    //   if (product.seller.id === this.props.userId)
+
+    // })
 
     return(
       <div className="user-products">

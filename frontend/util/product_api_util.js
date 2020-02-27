@@ -17,23 +17,22 @@ export const fetchProduct = productId => (
 
 export const fetchAllProducts = userId => (
     $.ajax({
-        method: 'GET',
+        method: 'GET', 
         url: 'api/products',
         data: { user_id: userId }
     })
 );
 
-
-export const updateProduct = product => {
-    return(
+export const updateProduct = (product) => (
     $.ajax({
-        method: 'PATCH',
-        url: `api/products/${product.id}`,
-        data: { product },
+        method: "PATCH",
+        url: `api/products/${product.get('product[id]')}`,
+        data: product,
         contentType: false,
         processData: false
     })
-)};
+)
+
 
 export const deleteProduct = productId => (
     $.ajax({

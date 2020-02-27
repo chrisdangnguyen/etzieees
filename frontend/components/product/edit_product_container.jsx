@@ -5,8 +5,8 @@ import { updateProduct, fetchProduct, deleteProduct } from '../../actions/produc
 
 
 const mapSTP = (state, ownProps) => {
-    let product = state.entities.products[ownProps.match.params.productId] ||
-        { title: "", description: "", price: "", category: "", quantity: "", 
+    let product = state.entities.products[ownProps.match.params.productId]
+     || { title: "", description: "", price: "", category: "", quantity: "", 
             user_id: state.session.id, photoFile: "", photoUrl: ""
         }
 
@@ -14,7 +14,7 @@ const mapSTP = (state, ownProps) => {
         product: product,
         userId: state.session.id,
         errors: state.errors.products,
-        formType: 'Edit product'
+        formType: 'edit form'
 }
 }
 

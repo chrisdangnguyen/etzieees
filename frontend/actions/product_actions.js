@@ -4,8 +4,6 @@ export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export const RECEIVE_PRODUCT_ERRORS = 'RECEIVE_PRODUCT_ERRORS';
-// export const RECEIVE_SEARCH_PRODUCTS = 'RECEIVE_SEARCH_PRODUCTS';
-// export const RECEIVE_PRODUCT_SEARCH = "RECEIVE_PRODUCT_SEARCH";
 
 // receive errors
 
@@ -29,10 +27,6 @@ const receiveProductErrors = errors => ({
     errors
 })
 
-// const receiveSearchProducts = results => ({
-//     type: RECEIVE_PRODUCT_SEARCH,
-//     results
-// })
 
 const receiveProductSearch = (results) => {
     return {
@@ -62,12 +56,13 @@ export const fetchAllProducts = () => dispatch => (
     )
 );
 
+
 export const updateProduct = product => dispatch => (
     APIUtil.updateProduct(product)
         .then(product => dispatch(receiveProduct(product)),
-            errors => (dispatch(receiveProductErrors(errors.responseJSON)))
+        errors => dispatch(receiveProductErrors(errors.responseJSON))
     )
-);
+)
 
 export const deleteProduct = productId => dispatch => (
     APIUtil.deleteProduct(productId) 

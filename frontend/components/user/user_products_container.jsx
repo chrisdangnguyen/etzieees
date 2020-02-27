@@ -5,6 +5,7 @@ import { fetchUserProducts } from '../../actions/product_actions';
 const mapSTP = (state, ownProps) => ({
   userId: ownProps.userId,
   products: Object.values(state.entities.products),
+  userid: state.session.id,
   
 });
 

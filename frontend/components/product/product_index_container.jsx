@@ -5,7 +5,12 @@ import { fetchAllProducts, fetchCategory } from "../../actions/product_actions"
 const mapSTP = (state, ownProps) => ({
     // products: Object.values(state.entities.products),
     products: Object.keys(state.entities.products).map(id => state.entities.products[id]),
-    category: ownProps.match.params.category || "index"
+    category: ownProps.match.params.category || "index",
+    userid: state.session.id || {},
+    currentUser: state.session.currentUser || {},
+    // user: state.entities.users[ownProps.match.params.userId],
+
+    // seller: seller
 });
 
 const mapDTP = (dispatch, ownProps) => {

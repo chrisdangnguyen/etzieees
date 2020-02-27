@@ -5,8 +5,9 @@ import { withRouter } from 'react-router-dom';
 class ProductForm extends React.Component {
     constructor(props) {
         super(props)
+        
         this.state = Object.assign( {}, { photoFile: '', photoUrl: ''}, this.props.product)
-        this.state = this.props.product;
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
@@ -14,26 +15,8 @@ class ProductForm extends React.Component {
     }
 
 
-    // componentDidMount() {
-    //     if (this.props.fetchProduct) {
-    //         this.props.fetchProduct(this.props.match.params.productId)
-    //         .then(() => {
-    //             this.setState({
-    //                 title: this.props.product.title,
-    //                 description: this.props.product.description,
-    //                 price: this.props.product.price,
-    //                 category: this.props.product.category,
-    //                 quantity: this.props.product.quantity,
-    //                 photoFile: this.props.product.photoFile,
-    //                 photoUrl: this.props.product.photoUrl,
-    //                 id: this.props.product.id
-    //             });
-    //         });
-    //     }
-    // }
-
     componentDidMount() {
-        if (this.props.formType === "update") {
+        if (this.props.formType === "edit form") {
             this.props.fetchProduct(this.props.match.params.productId);
         }
     }
@@ -62,20 +45,21 @@ class ProductForm extends React.Component {
         formData.append('product[user_id]', this.state.user_id);
         formData.append('product[category]', this.state.category);
         formData.append('product[quantity]', this.state.quantity);
+    
+        if (this.state.id) {
+            formData.append('product[id]', this.state.id);
+        };
         if (this.state.photoFile === "") {
             this.setState({ photoFile: null })
         }
         if (this.state.photoFile) {
             formData.append('product[photo]', this.state.photoFile);
         }
-        // if (this.state.photoFile) {
-        //         formatData.append('product[photo]', photoFile);
-        //     }
 
         this.props.processForm(formData)
             .then(payload => {
                 this.props.history.push(`/products/${payload.product.id}`)
-            });
+        });
     }
 
     handleClear(e) {
@@ -117,11 +101,10 @@ class ProductForm extends React.Component {
     render() {
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl} className="photo-preview" /> : null;
 
-
         let header;
         let deleteButton;
 
-        if (this.props.formType === "Edit product") {
+        if (this.props.formType === "edit form") {
             header = "Update listing";
             deleteButton = <button onClick={this.handleDelete} className="delete-button">Delete listing</button>
         } else {

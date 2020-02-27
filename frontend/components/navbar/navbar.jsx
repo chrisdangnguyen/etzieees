@@ -45,6 +45,10 @@ const Navbar = ({ currentUser, logout, openModal }) => {
             <img src={currentUser.photoUrl} className="profile-logo" /> : 
             <img src={window.images.logo} className="profile-logo" /> 
 
+        const previewDropdown = currentUser.photoUrl ?
+            <img src={currentUser.photoUrl} className="user-dropdown-logo" /> :
+            <img src={window.images.logo} className="user-dropdown-logo" />
+
         return (
             <div className="loggedin-navbar">
 
@@ -62,27 +66,29 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                     <p className="profile-text">You 
                         <i className="fa fa-caret-down" aria-hidden="true"></i> 
                     </p>
+                
 
                 
-                <div className="dropdown-content" id="myDropdown">
-                    <div className="dropdown-profile">
-                            <Link to={`/users/${currentUser.id}`} className="view-link">
-                                <span className="view-profile">
-                                View Profile 
-                                </span>
-                                <span className="first-name"></span>  
-                                {/* <img src={window.images.logo} />  */}
-                            </Link>
-                    </div>
-                        <div className="dropdown-head">
+                    <div className="dropdown-content" id="myDropdown">
+                        <div className="dropdown-profile">
+                                <Link to={`/users/${currentUser.id}`} className="view-link">
+                                    <div className="dropdown-user-img">
+                                        {previewDropdown}
+                                    </div>
+                                    <div className="dropdown-user-info">
+                                        <span className="first-name">{currentUser.name}</span> 
+                                        <div className="view-profile-button">
+                                            <p className="view-profile-text">View Profile</p>
+                                        </div> 
+                                    </div>
+                                </Link>
+                        </div>
+                        <div className="dropdown-head" href="#" onClick={logout}>
                             <a href="#" onClick={logout} className="logout-btn">Sign out</a>
                         </div>
                     </div>
                 </div> 
 
-                {/* <div className="dropdown-head">
-                    <a href="#" onClick={logout} className="logout-btn">Sign out</a>
-                </div> */}
 
 
                 <div className="cart-container">
