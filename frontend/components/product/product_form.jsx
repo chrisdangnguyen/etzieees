@@ -41,8 +41,7 @@ class ProductForm extends React.Component {
         const formData = new FormData();
         formData.append('product[title]', this.state.title);
         formData.append('product[description]', this.state.description);
-        formData.append(
-            "product[price]", parseFloat(product.price).toFixed(2));
+        formData.append("product[price]", parseFloat(this.state.price).toFixed(2));
         formData.append('product[user_id]', this.state.user_id);
         formData.append('product[category]', this.state.category);
         formData.append('product[quantity]', this.state.quantity);
@@ -70,7 +69,7 @@ class ProductForm extends React.Component {
 
     handleDelete() {
         this.props.deleteProduct(this.props.product.id)
-            .then(() => { this.props.history.push('/products')})
+            .then(() => { this.props.history.push(`/users/${this.props.userId}`)})
     }
 
     renderErrors() {
