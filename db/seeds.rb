@@ -17,62 +17,124 @@ Product.delete_all
 
 #creating user seeds
 
-user1 = User.create!({email: "demo@etzieees.com", name: "Demo", password: "demo123", 
+user1 = User.create({email: "demo@etzieees.com", name: "Demo", password: "demo123", 
     city: 'San Francisco', gender: 'male', birth_month: "November", birth_day: "23", 
     about: 'Hi, I enjoy making custom vintage items and selling them!' })
-user2 = User.create!({email: "leathergoods", name: "Pia", password: "asdfghjkl",
+file70 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/palmtrees.jpg")
+user1.photo.attach(io: file70, filename: "palmtrees.jpg")
+user1.save!
+
+user2 = User.create({email: "leathergoods", name: "Pia", password: "asdfghjkl",
     city: 'Austin', gender: 'male', birth_month: "November", birth_day: "5", 
     about: 'Hi, I enjoy making custom vintage items and selling them!' })
-user3 = User.create!({email: "76ers4lyfe", name: "James", password: "asdfghjkl"})
+file71 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/waterfall.jpeg")
+    user2.photo.attach(io: file71, filename: "waterfall.jpeg")
+    user2.save!
+
+user3 = User.create({email: "76ers4lyfe", name: "James", password: "asdfghjkl"})
+file72 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/zion.jpg")
+    user3.photo.attach(io: file72, filename: "zion.jpg")
+    user3.save!
+
 user4 = User.create({email: "vintagestyle", name: "Sam", password: "asdfghjkl"})
+file73 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/yosemite.jpg")
+    user4.photo.attach(io: file73, filename: "yosemite.jpg")
+    user4.save!
+
 user5 = User.create({email: "mitchup", name: "Mitch", password: "asdfghjkl"})
+file81 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/goldengate.jpg")
+    user5.photo.attach(io: file81, filename: "goldengate.jpg")
+    user5.save!
+
 user6 = User.create({email: "4evabelieber", name: "Suzie", password: "asdfghjkl"})
-user7 = User.create!({email: "queen", name: "Beyonce", password: "asdfghjkl"})
-user8 = User.create!({email: "purejewelry", name: "Theo", password: "asdfghjkl"})
-user9 = User.create!({email: "channelorange", name: "Urban", password: "asdfghjkl"})
-user10 = User.create!({email: "fashionnova", name: "Mikejones", password: "asdfghjkl"})
-user11 = User.create!({email: "allthejewelries", name: "jewelryforall", password: "asdfghjkl",
+
+user7 = User.create({email: "queen", name: "Beyonce", password: "asdfghjkl"})
+
+user8 = User.create({email: "purejewelry", name: "Theo", password: "asdfghjkl"})
+
+user9 = User.create({email: "channelorange", name: "Urban", password: "asdfghjkl"})
+file74 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/ripkb.png")
+    user9.photo.attach(io: file74, filename: "ripkb.png")
+    user9.save!
+
+user10 = User.create({email: "fashionnova", name: "Mikejones", password: "asdfghjkl"})
+file75 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/rainy.jpg")
+    user10.photo.attach(io: file75, filename: "rainy.jpg")
+    user10.save!
+
+user11 = User.create({email: "allthejewelries", name: "jewelryforall", password: "asdfghjkl",
     city: 'San Francisco', gender: 'female', birth_month: "January", birth_day: "18", 
     about: 'Hello, I have been making jewelry for years and love to see my beautiful creation on people! 
     Please check my unique items and let me know if there are any questions.' })  
-user12 = User.create!({email: "uniquenessclothes", name: "uniquenessFashion", password: "asdfghjkl",
+file76 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/rain.jpg")
+    user11.photo.attach(io: file76, filename: "rain.jpg")
+    user11.save!
+
+user12 = User.create({email: "uniquenessclothes", name: "uniquenessFashion", password: "asdfghjkl",
     city: 'Portland', gender: 'male', birth_month: "July", birth_day: "14", 
     about: "I am based in Portland and been making awesome clothings for all! Using the utmost quality material for clothing. 
     Sure to last lifetime!" })  
-user13 = User.create!({email: "tisthewedding", name: "seasonofhappyness", password: "asdfghjkl",
+file77 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/sanddunes.jpg")
+    user12.photo.attach(io: file77, filename: "sanddunes.jpg")
+    user12.save!
+
+user13 = User.create({email: "tisthewedding", name: "seasonofhappyness", password: "asdfghjkl",
     city: 'New York', gender: 'female', birth_month: "May", birth_day: "24", 
-    about: 'All your custom wedding needs I am here for. Please do not hesistate to message me for any specific wedding needs.' })  
-user14 = User.create!({email: "creativeneeds", name: "creativearts", password: "asdfghjkl",
+    about: 'All your custom wedding needs I am here for. Please do not hesistate to message me for any specific wedding needs.' })
+file78 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/beach.jpeg")
+    user13.photo.attach(io: file78, filename: "beach.jpeg")
+    user13.save!
+
+user14 = User.create({email: "creativeneeds", name: "creativearts", password: "asdfghjkl",
     city: 'Seattle', gender: 'male', birth_month: "April", birth_day: "22", 
     about: 'I like art. Do you like art? Come shop and look at my creativeness on canvas.' })
-user15 = User.create!({email: "susancrafting", name: "craftingworld", password: "asdfghjkl",
+file79 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/starrynight.jpg")
+    user14.photo.attach(io: file79, filename: "starrynight.jpg")
+    user14.save!
+
+user15 = User.create({email: "susancrafting", name: "craftingworld", password: "asdfghjkl",
     city: 'San Diego', gender: 'female', birth_month: "June", birth_day: "02", 
-    about: 'I got all the craft supplies needed to make awesome and unique creations!' })  
+    about: 'I got all the craft supplies needed to make awesome and unique creations!' })
+file80 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/machu.jpg")
+    user15.photo.attach(io: file80, filename: "machu.jpg")
+    user15.save!  
 
 # file70 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/palmtrees.jpg")
 #     user1.photo.attach(io: file70, filename: "palmtrees.jpg")
+#     user1.save!
 # file71 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/waterfall.jpg")
 #     user2.photo.attach(io: file71, filename: "waterfall.jpg")
+#     user2.save!
 # file72 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/zion.jpg")
 #     user3.photo.attach(io: file72, filename: "zion.jpg")
+#     user3.save!
 # file73 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/ripkb.png")
 #     user4.photo.attach(io: file73, filename: "ripkb.png")
+#     user4.save!
 # file74 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/yosemite.jpg")
 #     user9.photo.attach(io: file74, filename: "yosemite.jpg")
+#     user9.save!
 # file75 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/rainy.jpg")
 #     user10.photo.attach(io: file75, filename: "rainy.jpg")
+#     user10.save!
 # file76 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/rain.jpg")
 #     user11.photo.attach(io: file76, filename: "rain.jpg")
+#     user11.save!
 # file77 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/sanddunes.jpg")
 #     user12.photo.attach(io: file77, filename: "sanddunes.jpg")
+#     user12.save!
 # file78 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/beach.jpg")
 #     user13.photo.attach(io: file78, filename: "beach.jpg")
+#     user13.save!
 # file79 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/starrynight.jpg")
 #     user14.photo.attach(io: file79, filename: "starrynight.jpg")
+#     user14.save!
 # file80 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/machu.jpg")
 #     user15.photo.attach(io: file80, filename: "machu.jpg")
+#     user15.save!
 # file81 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/goldengate.jpg")
 #     user5.photo.attach(io: file81, filename: "goldengate.jpg")
+#     user5.save!
 
 
 
@@ -617,7 +679,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 8.60, user_id: user9.id, quantity: 9, category: 'toys&entertainment'})
+    price: 8.60, user_id: user4.id, quantity: 9, category: 'toys&entertainment'})
     file49 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/busyboard.jpg")
     product49.photo.attach(io: file49, filename: "busyboard.jpg")
     product49.save!
@@ -629,7 +691,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 19.85, user_id: user9.id, quantity: 9, category: 'toys&entertainment'})
+    price: 19.85, user_id: user4.id, quantity: 9, category: 'toys&entertainment'})
     file50 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/speakers.jpg")
     product50.photo.attach(io: file50, filename: "speakers.jpg")
     product50.save!
@@ -641,7 +703,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 3.50, user_id: user9.id, quantity: 5, category: 'toys&entertainment'})
+    price: 3.50, user_id: user4.id, quantity: 5, category: 'toys&entertainment'})
     file51 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/crochet.jpg")
     product51.photo.attach(io: file51, filename: "crochet.jpg")
     product51.save!
@@ -653,7 +715,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 13.00, user_id: user9.id, quantity: 9, category: 'toys&entertainment'})
+    price: 13.00, user_id: user4.id, quantity: 9, category: 'toys&entertainment'})
     file52 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/dice.jpg")
     product52.photo.attach(io: file52, filename: "dice.jpg")
     product52.save!
@@ -665,7 +727,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 29.85, user_id: user9.id, quantity: 9, category: 'toys&entertainment'})
+    price: 29.85, user_id: user4.id, quantity: 9, category: 'toys&entertainment'})
     fil53 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/babytoys.jpg")
     produc53.photo.attach(io: fil53, filename: "babytoys.jpg")
     produc53.save!
@@ -677,7 +739,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 21.53, user_id: user9.id, quantity: 4, category: 'toys&entertainment'})
+    price: 21.53, user_id: user4.id, quantity: 4, category: 'toys&entertainment'})
     file54 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/whale.jpg")
     product54.photo.attach(io: file54, filename: "whale.jpg")
     product54.save!
@@ -689,7 +751,7 @@ product30 = Product.new({title: "Mama Bear T-Shirt for Women",
     tellus suscipit, viverra augue ut, imperdiet neque. Ut ac accumsan sapien, ac egestas 
     lectus. Maecenas cursus risus eu enim tempor, non placerat sapien gravida. Maecenas quis 
     euismod est. Mauris volutpat scelerisque orci, ut venenatis ante egestas eu.", 
-    price: 24.85, user_id: user9.id, quantity: 9, category: 'toys&entertainment'})
+    price: 24.85, user_id: user4.id, quantity: 9, category: 'toys&entertainment'})
     file55 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/pencil.jpg")
     product55.photo.attach(io: file55, filename: "pencil.jpg")
     product55.save!
