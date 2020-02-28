@@ -99,49 +99,14 @@ file80 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/machu.jpg")
     user15.photo.attach(io: file80, filename: "machu.jpg")
     user15.save!  
 
-# file70 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/palmtrees.jpg")
-#     user1.photo.attach(io: file70, filename: "palmtrees.jpg")
-#     user1.save!
-# file71 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/waterfall.jpg")
-#     user2.photo.attach(io: file71, filename: "waterfall.jpg")
-#     user2.save!
-# file72 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/zion.jpg")
-#     user3.photo.attach(io: file72, filename: "zion.jpg")
-#     user3.save!
-# file73 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/ripkb.png")
-#     user4.photo.attach(io: file73, filename: "ripkb.png")
-#     user4.save!
-# file74 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/yosemite.jpg")
-#     user9.photo.attach(io: file74, filename: "yosemite.jpg")
-#     user9.save!
-# file75 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/rainy.jpg")
-#     user10.photo.attach(io: file75, filename: "rainy.jpg")
-#     user10.save!
-# file76 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/rain.jpg")
-#     user11.photo.attach(io: file76, filename: "rain.jpg")
-#     user11.save!
-# file77 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/sanddunes.jpg")
-#     user12.photo.attach(io: file77, filename: "sanddunes.jpg")
-#     user12.save!
-# file78 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/beach.jpg")
-#     user13.photo.attach(io: file78, filename: "beach.jpg")
-#     user13.save!
-# file79 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/starrynight.jpg")
-#     user14.photo.attach(io: file79, filename: "starrynight.jpg")
-#     user14.save!
-# file80 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/machu.jpg")
-#     user15.photo.attach(io: file80, filename: "machu.jpg")
-#     user15.save!
-# file81 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/goldengate.jpg")
-#     user5.photo.attach(io: file81, filename: "goldengate.jpg")
-#     user5.save!
+
 
 
 
 #creating product seeds
 product1 = Product.new({category: "jewelry&accessories", 
     title: "Emerald ring", description: "Beautiful emerald ring in a size 10", 
-    price: 250.50, user_id: user2.id, quantity: 5 })
+    price: 250.49, user_id: user2.id, quantity: 5 })
     file1 = open("https://etzieees-seeds.s3-us-west-1.amazonaws.com/emerald_ring.jpg")
     product1.photo.attach(io: file1, filename: "emerald_ring.jpg")
     product1.save!

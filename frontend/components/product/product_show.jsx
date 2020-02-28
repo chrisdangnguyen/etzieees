@@ -62,7 +62,7 @@ class ProductShow extends React.Component {
                     {product.seller.name}
                   </Link>
                   <h2 className="show-title">{product.title}</h2>
-                  <h3 className="show-price">${product.price.toFixed(2)}</h3>
+                  <h3 className="show-price">${parseFloat(product.price).toFixed(2)}</h3>
 
                 <div className="show-quantity">Quantity
                     <div className="quantity-container">
