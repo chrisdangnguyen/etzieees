@@ -35,7 +35,6 @@ const App = () => (
             <Route path="/category/:category" component={ProductIndexContainer} />
             <Route exact path="/users/:userId" component={UserShowContainer} />
             <Route exact path="/users/:userId/edit" component={UserEditContainer} />
-            {/* <ProtectedRoute exact path="/products/productId/:edit" component={ProductIndexContainer} /> */}
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>
