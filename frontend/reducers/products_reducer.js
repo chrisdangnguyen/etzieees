@@ -1,8 +1,7 @@
 import { 
     RECEIVE_ALL_PRODUCTS,
     RECEIVE_PRODUCT,
-    REMOVE_PRODUCT,
-    RECEIVE_PRODUCT_SEARCH
+    REMOVE_PRODUCT
 } from '../actions/product_actions';
 
 

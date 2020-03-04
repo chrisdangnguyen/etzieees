@@ -6,7 +6,7 @@ export const createCartItem = item => (
   })
 );
 
-export const fetchCartItems = userId => (
+export const fetchAllCartItems = userId => (
   $.ajax({
     method: 'GET',
     url: 'api/cart_items/',
