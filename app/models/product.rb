@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
     validates :title, :price, :description, :quantity, :category, :user_id, presence: true 
-    # validates :price , numericality: { greater_than: 0 }
     validates :quantity, numericality: { greater_than: 0 }
     validates :category, inclusion: { in: ["jewelry&accessories", "clothing&shoes", 
             "home&living", "wedding&party", "toys&entertainment", "art&collectibles", "craftsupplies", "vintage"],
@@ -15,6 +14,11 @@ class Product < ApplicationRecord
     class_name: "User"
     
     has_one_attached :photo
+
+    has_many :cart_items,
+        primary_key: :id,
+        foreign_key: :product_id,
+        class_name: "CartItem"
     
         
     def ensure_photo
