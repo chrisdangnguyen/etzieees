@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get '/products/search', to: 'products#search'
     get '/products/category', to: 'products#category'
     resources :products, only: [:create, :index, :show, :update, :destroy]
-  
+    resources :cart_items
     
   end
 

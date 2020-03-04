@@ -1,7 +1,7 @@
 export const createProduct = product => (
     $.ajax({
         method: 'POST',
-        url: '/api/products',
+        url: 'api/products',
         data:  product,
         contentType: false,
         processData: false
