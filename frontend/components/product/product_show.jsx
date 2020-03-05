@@ -1,47 +1,57 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import NumericInput from "react-numeric-input";
+// import NewCartItem from '../cart_item/new_cart_item_container';
 
 
 
 class ProductShow extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = {
-        //   product_id: this.props.match.params.productId,
-        //   quantity: 1
-        // };
+        this.state = {
+          product_id: this.props.match.params.productId,
+          quantity: 1
+        };
 
-        // this.handleChange = this.handleChange.bind(this)
-
+        this.handleChange = this.handleChange.bind(this)
+        this.handleAddToCart = this.handleAddToCart.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchProduct(this.props.match.params.productId)
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.product.id != this.props.match.params.productId) {
-    //         this.props.fetchProduct(this.props.match.params.productId)
-    //     }
+    componentDidUpdate(prevProps) {
+      if (this.props.match.params.productId !== prevProps.match.params.productId) {
+        this.props.fetchProduct(this.props.match.params.productId);
+      }
+    }
 
-    //     if (this.props.product.user_id != this.props.seller.id) {
-    //         this.props.fetchUser(this.props.product.seller.id)
-    //     }
-
-    // }
+    handleChange(e) {
+      this.setState({quantity: e})
+    }
 
 
-    // handleChange(event) {
-    //     this.setState({ quantity: event });
-    // }
+    handleAddToCart(e) {
+      e.preventDefault();
+      this.props.addCartItem(this.state)
+      // this.props.history.push('/cart_items');
+    }
+
+    handleChange(e) {
+        this.setState({ quantity: e });
+    }
 
 
     render(){
-        const { product, seller } = this.props;
+        const { product, userId } = this.props;
         if (!this.props.product) {
             return null
         }
+
+      const cartButton = userId === product.user_id
+        ? ''
+        : < button className="product-to-cart" onClick={this.handleAddToCart}>Add to cart</button>;
 
         return (
           <div className="show-container">
@@ -68,17 +78,16 @@ class ProductShow extends React.Component {
                     <div className="quantity-container">
                         <NumericInput
                             required
-                            // value={this.state.quantity}
+                            value={this.state.quantity}
                             id="quantity"
                             min={1}
                             max={product.quantity}
-                            // onChange={this.handleChange}
+                            onChange={this.handleChange}
                         />
                     </div>
                 </div>
                     <div className="cart-button-container">
-
-                        <button className="product-to-cart">Add to cart</button>
+                      {cartButton}
                     </div>
                 </div>
 
@@ -95,4 +104,4 @@ class ProductShow extends React.Component {
         
 }
 
-export default ProductShow;
+export default withRouter(ProductShow);

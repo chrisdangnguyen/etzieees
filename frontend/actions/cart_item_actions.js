@@ -5,19 +5,19 @@ export const RECEIVE_CART_ITEM = 'RECEIVE_CART_ITEM';
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export const RECEIVE_CART_ITEM_ERRORS = 'RECEIVE_CART_ITEM_ERRORS';
 
-const receiveAllCartItems = items => ({
+const receiveAllCartItems = cartItems => ({
   type: RECEIVE_ALL_CART_ITEMS,
-  items
+  cartItems
 });
 
-const receiveCartItem = item => ({
+const receiveCartItem = cartItem => ({
   type: RECEIVE_CART_ITEM,
-  item
+  cartItem
 });
 
-const removeCartItem = itemId => ({
+const removeCartItem = cartItemId => ({
   type: REMOVE_CART_ITEM,
-  itemId
+  cartItemId
 });
 
 const receiveCartItemErrors = errors => ({
@@ -25,30 +25,30 @@ const receiveCartItemErrors = errors => ({
   errors
 });
 
-export const createCartItem = item => dispatch => (
-  CartItemAPIUtil.createCartItem(item)
-    .then(item => dispatch(receiveCartItem(item)),
+export const addCartItem = cartItem => dispatch => (
+  CartItemAPIUtil.addCartItem(cartItem)
+    .then(cartItem => dispatch(receiveCartItem(cartItem)),
     errors =>(dispatch(receiveCartItemErrors(errors.responseJSON)))
   ) 
 );
 
-export const fetchAllCartItems = userId => dispatch => (
-  CartItemAPIUtil.fetchAllCartItems(userId)
-    .then(items => dispatch(receiveAllCartItems(items)),
+export const fetchAllCartItems = () => dispatch => (
+  CartItemAPIUtil.fetchAllCartItems()
+    .then(cartItems => dispatch(receiveAllCartItems(cartItems)),
     errors => (dispatch(receiveCartItemErrors(errors.responseJSON)))
   )
 );
 
-export const updateCartItem = item => dispatch (
-  CartItemAPIUtil.updateCartItem(item)
-    .then(item => dispatch(receiveCartItem(item)),
+export const updateCartItem = cartItem => dispatch (
+  CartItemAPIUtil.updateCartItem(cartItem)
+    .then(cartItem => dispatch(receiveCartItem(cartItem)),
     errors => (dispatch(receiveCartItemErrors(errors.responseJSON)))
     )
 );
 
-export const deleteCartItem = itemId => dispatch => (
-  CartItemAPIUtil.deleteCartItem(itemId)
-    .then(() => dispatch(removeCartItem(itemId)),
+export const deleteCartItem = cartItemId => dispatch => (
+  CartItemAPIUtil.deleteCartItem(cartItemId)
+    .then(() => dispatch(removeCartItem(cartItemId)),
     errors => (dispatch(receiveCartItemErrors(errors.responseJSON)))
     )
 );
