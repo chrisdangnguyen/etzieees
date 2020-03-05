@@ -92,7 +92,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
 
                 <div className="cart-container">
-                    <Link to="" className="sell-link">
+                    <Link to='/cart' className="sell-link">
                         <i className="fa fa-shopping-cart">
                         </i>
                         <p className="cart-text">Cart</p>

@@ -19,7 +19,7 @@ import ProductIndexContainer from './product/product_index_container';
 import ProductShowContainer from './product/product_show_container';
 import UserShowContainer from './user/user_show_container';
 import UserEditContainer from './user/edit_user_container';
-// import CartItemIndexContainer from './cart_item/cart_item_index_container';
+import CartItemIndexContainer from './cart_item/cart_items_container';
 
 const App = () => (
     <div>
@@ -34,7 +34,7 @@ const App = () => (
             <Route exact path="/products" component={ProductIndexContainer} />
             <Route path="/search" component={ProductIndexContainer} />
             <Route path="/category/:category" component={ProductIndexContainer} />
-            <Route path="/cart" />
+            <Route path="/cart" component={CartItemIndexContainer}/>
             <Route exact path="/users/:userId" component={UserShowContainer} />
             <Route exact path="/users/:userId/edit" component={UserEditContainer} />
             <Route exact path="/" component={Homepage} />

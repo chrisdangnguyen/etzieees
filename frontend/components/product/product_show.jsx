@@ -4,7 +4,6 @@ import NumericInput from "react-numeric-input";
 // import NewCartItem from '../cart_item/new_cart_item_container';
 
 
-
 class ProductShow extends React.Component {
     constructor(props) {
         super(props)
@@ -34,8 +33,8 @@ class ProductShow extends React.Component {
 
     handleAddToCart(e) {
       e.preventDefault();
-      this.props.addCartItem(this.state)
-      // this.props.history.push('/cart_items');
+      this.props.addCartItem(this.state);
+      this.props.history.push('/cart');
     }
 
     handleChange(e) {
