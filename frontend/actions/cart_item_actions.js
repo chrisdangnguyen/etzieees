@@ -39,7 +39,7 @@ export const fetchAllCartItems = () => dispatch => (
   )
 );
 
-export const updateCartItem = cartItem => dispatch (
+export const updateCartItem = cartItem => dispatch => (
   CartItemAPIUtil.updateCartItem(cartItem)
     .then(cartItem => dispatch(receiveCartItem(cartItem)),
     errors => (dispatch(receiveCartItemErrors(errors.responseJSON)))

@@ -18,7 +18,7 @@ export const updateCartItem = cart_item => (
   $.ajax({
     method: 'PATCH',
     url: `api/cart_items/${cart_item.id}`,
-    data: {item}
+    data: {cart_item}
   })
 );
 

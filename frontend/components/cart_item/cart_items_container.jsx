@@ -5,9 +5,10 @@ import { updateCartItem, deleteCartItem, fetchAllCartItems } from '../../actions
 
 const mapSTP = (state) => {
   const allItems = state.entities.cartItems;
+  const allCartItems = Object.keys(allItems).map(id => allItems[id])
 
   return ({
-    allCartItems: Object.keys(allItems).map(id => allItems[id] )
+    allCartItems: allCartItems
   })
 }
 

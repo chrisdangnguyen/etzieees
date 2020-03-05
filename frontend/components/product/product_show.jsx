@@ -26,10 +26,6 @@ class ProductShow extends React.Component {
       }
     }
 
-    handleChange(e) {
-      this.setState({quantity: e})
-    }
-
 
     handleAddToCart(e) {
       e.preventDefault();
