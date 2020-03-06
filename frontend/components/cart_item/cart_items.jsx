@@ -89,7 +89,7 @@ class CartItems extends React.Component {
                   Get shipping cost
                 </p>
 
-                <button className="checkout-button">Proceed to checkout</button>
+                <button className="checkout-button" onClick={() => (this.props.openModal())}>Proceed to checkout</button>
 
               </div>
             </div>

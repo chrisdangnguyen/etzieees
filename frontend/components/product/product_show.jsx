@@ -59,7 +59,7 @@ class ProductShow extends React.Component {
               <div className="show-col-left">
                 <img src={product.photoUrl} className="show-photo" />
                 <div className="show-item-review">
-                  <p>Reviews</p>
+                  {/* <p>Reviews</p> */}
                 </div>
               </div>
 

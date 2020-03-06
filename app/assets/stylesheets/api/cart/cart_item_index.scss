@@ -117,6 +117,10 @@
   
 }
 
+.item-quantity-container {
+  padding-left: 15px;
+}
+
 #quantity {
   width: 73px;
   height: 38px;
@@ -133,6 +137,10 @@
 .item-cost > h3 {
   font-size: 14px;
   font-weight: 500;
+}
+
+.item-cost {
+  padding-left: 15px;
 }
 
 .item-cost > p {

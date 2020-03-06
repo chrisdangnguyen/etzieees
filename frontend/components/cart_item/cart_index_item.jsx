@@ -55,7 +55,7 @@ class CartIndexItem extends React.Component {
 
           <div className="item-cost">
             <h3>${this.totalItemSum()}</h3>
-            <p>(${item.price} each)</p>
+            <p>(${parseFloat(item.price).toFixed(2)} each)</p>
           </div>
         </div>
 

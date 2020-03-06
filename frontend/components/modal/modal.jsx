@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import CheckoutMessageContainer from '../cart_item/checkout_message_container';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -15,6 +16,9 @@ function Modal({ modal, closeModal }) {
             break;
         case 'signup':
             component = <SignupFormContainer />;
+            break;
+        case 'checkout':
+            component = <CheckoutMessageContainer />;
             break;
         default:
             return null;
