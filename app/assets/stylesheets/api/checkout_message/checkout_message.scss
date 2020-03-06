@@ -1,0 +1,55 @@
+.checkout-container {
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #faf9f5;
+  height: 400px;
+  width: 270px;
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.checkout-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 270px;
+  text-align: center;
+  background-color: white;
+  // padding: 10px 0px;
+}
+
+.message {
+  font-size: 30px;
+  overflow-wrap: break-word;
+  vertical-align: middle;
+  font-weight: 300;
+}
+
+.checkout-title {
+  font-family: "Guardian-EgypTT",serif;
+  font-size: 50px;
+
+  color: #F1641E;
+  vertical-align: middle;
+}
+
+
+.checkout-message > p {
+
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.checkout-link {
+  color: black;
+  font-size: 24px;
+}
+
+// .checkout-link:hover {
+//   transform: scale(1.25);
+// }
+
+
