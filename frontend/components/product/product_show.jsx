@@ -29,8 +29,13 @@ class ProductShow extends React.Component {
 
     handleAddToCart(e) {
       e.preventDefault();
+      if (!this.props.userId) {
+        this.props.openModal('login')
+      } else {
         this.props.addCartItem(this.state);
         this.props.history.push(`/cart`)
+
+      }
     }
 
     handleChange(e) {

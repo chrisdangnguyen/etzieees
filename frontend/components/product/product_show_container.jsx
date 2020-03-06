@@ -3,6 +3,7 @@ import ProductShow from './product_show';
 import { fetchProduct } from '../../actions/product_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { addCartItem, fetchAllCartItems, updateCartItem } from '../../actions/cart_item_actions';
+import { openModal } from '../../actions/modal_actions';
 
 
 const mapSTP = (state, ownProps) => {
@@ -26,7 +27,8 @@ const mapDTP = dispatch => ({
     fetchUser: userId => dispatch(fetchUser(userId)),
     addCartItem: cartItem => dispatch(addCartItem(cartItem)),
     fetchAllCartItems: ()  => dispatch(fetchAllCartItems()),
-    updateCartItem: item => dispatch(updateCartItem(item))
+    updateCartItem: item => dispatch(updateCartItem(item)),
+    openModal: (modal) => dispatch(openModal(modal))
 })
 
 export default connect(mapSTP, mapDTP)(ProductShow);

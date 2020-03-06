@@ -17,27 +17,13 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 Register
             </button>
 
-            <button className="shop-btn">
+            <button className="shop-btn" onClick={() => (openModal('login'))}>
                 <i className="fa fa-shopping-cart"></i>
             </button>
             
         </div>
 
     );
-
-
-    // window.onclick = function (event) {
-    //     if (!event.target.matches('.dropdown-header')) {
-    //         var dropdowns = document.getElementsByClassName("dropdown-content");
-    //         var i;
-    //         for (i = 0; i < dropdowns.length; i++) {
-    //             var openDropdown = dropdowns[i];
-    //             if (openDropdown.classList.contains('show')) {
-    //                 openDropdown.classList.remove('show');
-    //             }
-    //         }
-    //     }
-    // }
 
 
     const personalNavbar = (user) => {
@@ -83,7 +69,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                                     </div>
                                 </Link>
                         </div>
-                        <div className="dropdown-head" href="#" onClick={logout}>
+                        <div className="dropdown-head" >
                             <a href="#" onClick={logout} className="logout-btn">Sign out</a>
                         </div>
                     </div>

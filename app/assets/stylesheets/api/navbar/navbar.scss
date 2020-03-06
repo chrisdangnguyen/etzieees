@@ -271,6 +271,9 @@
     font-size: 14px;
     font-weight: 300;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    min-width: 280px;
+    display: block;
+    padding-left: 20px;
 }
 
 .view-link {
@@ -336,9 +339,8 @@
     border-radius: 0px 0px 5px 5px;
     height: 50px;
     text-align: left;
-    padding-left: 20px;
     line-height: 50px;
-
+    min-width: 280px;
 }
 
 .dropdown-profile {

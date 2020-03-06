@@ -29,14 +29,14 @@ const App = () => (
         </header>
         <Switch>
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} /> 
-            <Route exact path="/products/:productId/edit" component={EditProductContainer} />
+            <ProtectedRoute exact path="/products/:productId/edit" component={EditProductContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             <Route exact path="/products" component={ProductIndexContainer} />
             <Route path="/search" component={ProductIndexContainer} />
             <Route path="/category/:category" component={ProductIndexContainer} />
-            <Route path="/cart" component={CartItemIndexContainer}/>
+            <ProtectedRoute path="/cart" component={CartItemIndexContainer}/>
             <Route exact path="/users/:userId" component={UserShowContainer} />
-            <Route exact path="/users/:userId/edit" component={UserEditContainer} />
+            <ProtectedRoute exact path="/users/:userId/edit" component={UserEditContainer} />
             <Route exact path="/" component={Homepage} />
         </Switch>
         <footer>
