@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import ProductShow from './product_show';
 import { fetchProduct } from '../../actions/product_actions';
 import { fetchUser } from '../../actions/user_actions';
-import { addCartItem, fetchAllCartItems } from '../../actions/cart_item_actions';
+import { addCartItem, fetchAllCartItems, updateCartItem } from '../../actions/cart_item_actions';
 
 
 const mapSTP = (state, ownProps) => {
@@ -16,7 +16,7 @@ const mapSTP = (state, ownProps) => {
     return {
         product: product,
         userId: state.session.id,
-        seller: seller
+        seller: seller,
     }
 }
 
@@ -25,7 +25,8 @@ const mapDTP = dispatch => ({
     fetchProduct: productId => dispatch(fetchProduct(productId)),
     fetchUser: userId => dispatch(fetchUser(userId)),
     addCartItem: cartItem => dispatch(addCartItem(cartItem)),
-    fetchAllCartItems: ()  => dispatch(fetchAllCartItems())
+    fetchAllCartItems: ()  => dispatch(fetchAllCartItems()),
+    updateCartItem: item => dispatch(updateCartItem(item))
 })
 
 export default connect(mapSTP, mapDTP)(ProductShow);

@@ -29,8 +29,8 @@ class ProductShow extends React.Component {
 
     handleAddToCart(e) {
       e.preventDefault();
-      this.props.addCartItem(this.state);
-      this.props.history.push('/cart');
+        this.props.addCartItem(this.state);
+        this.props.history.push(`/cart`)
     }
 
     handleChange(e) {

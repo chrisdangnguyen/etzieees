@@ -8,7 +8,8 @@ const mapSTP = (state) => {
   const allCartItems = Object.keys(allItems).map(id => allItems[id])
 
   return ({
-    allCartItems: allCartItems
+    allCartItems: allCartItems,
+    user_id: state.session.id
   })
 }
 

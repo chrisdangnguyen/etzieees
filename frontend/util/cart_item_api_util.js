@@ -9,8 +9,7 @@ export const addCartItem = cart_item => (
 export const fetchAllCartItems = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/cart_items/',
-    // data: { user_id: userId}
+    url: 'api/cart_items',
   })
 );
 

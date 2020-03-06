@@ -11,7 +11,7 @@ class Api::CartItemsController < ApplicationController
   end
 
   def index
-    @cart_items = CartItem.where(user_id: params[:user_id])
+    @cart_items = CartItem.where(user_id: current_user.id)
     render :index
   end
 
