@@ -7,14 +7,10 @@ class CartItems extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      loading: true 
-    }
   }
 
   componentDidMount() {
     this.props.fetchAllCartItems()
-    .then(() => this.setState({loading: false}))
   }
 
 
@@ -29,10 +25,6 @@ class CartItems extends React.Component {
 
   render() {
     const {allCartItems} = this.props;
-
-    if (this.state.loading){
-      return null;
-    }
 
     let allItems = this.props.allCartItems.map(item => {
       return (
@@ -50,50 +42,62 @@ class CartItems extends React.Component {
       <h2 className="total-items">{allCartItems.length} items in your cart</h2>
 
 
-    return (
-      <div className="cart-div">
-        <div className="page-title">
-          {title}
+    if (allCartItems.length === 0) {
+      return (
+        <div className="cart-empty-div">
+          <div className="cart-empty-container">
+            <h3>Your cart is empty.</h3>
+            <p>Discover something unique to fill it up</p>
+          </div>
         </div>
+      )
+    } else {
 
-        <div className="cart-payment-container">
-          <div className="left-cart-container">
-            {allItems}
+      return (
+        <div className="cart-div">
+          <div className="page-title">
+            {title}
           </div>
 
-          <div className="right-cart-container">
-            <div className="payment-options">
-              <h2>How you'll pay</h2>
-              <div className="cards-icon">
-                <input type="radio" name="payment" id="select-pay"/>
-                <i className="fa fa-cc-mastercard"></i>
-                <i className="fa fa-cc-visa"></i>
-                <i className="fa fa-cc-amex"></i>
-                <i className="fa fa-cc-discover"></i>
+          <div className="cart-payment-container">
+            <div className="left-cart-container">
+              {allItems}
+            </div>
+
+            <div className="right-cart-container">
+              <div className="payment-options">
+                <h2>How you'll pay</h2>
+                <div className="cards-icon">
+                  <input type="radio" name="payment" id="select-pay"/>
+                  <i className="fa fa-cc-mastercard"></i>
+                  <i className="fa fa-cc-visa"></i>
+                  <i className="fa fa-cc-amex"></i>
+                  <i className="fa fa-cc-discover"></i>
+                </div>
+
+                <div className="paypal">
+                  <input type="radio" name="payment" id="select-pay"/>
+                  <i className="fa fa-cc-paypal"></i>
+                </div>
+
+                <div className="total-amount">
+                  <p>Item(s) total</p>
+                  <h3>${this.totalItemsSum()}</h3>
+                </div>
+
+                <p className="ship-cost">
+                  Get shipping cost
+                </p>
+
+                <button className="checkout-button">Proceed to checkout</button>
+
               </div>
-
-              <div className="paypal">
-                <input type="radio" name="payment" id="select-pay"/>
-                <i className="fa fa-cc-paypal"></i>
-              </div>
-
-              <div className="total-amount">
-                <p>Item(s) total</p>
-                <h3>${this.totalItemsSum()}</h3>
-              </div>
-
-              <p className="ship-cost">
-                Get shipping cost
-              </p>
-
-              <button className="checkout-button">Proceed to checkout</button>
-
             </div>
           </div>
-        </div>
 
-      </div>
-    )
+        </div>
+      )
+    }
   }
 
 }

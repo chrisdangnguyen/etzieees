@@ -255,3 +255,40 @@
 .checkout-button:hover {
   opacity: 0.8;
 }
+
+.cart-empty-div {
+  background-color: rgb(250, 249, 245);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // padding: 120px 0px;
+  padding-top: 80px;
+  padding-bottom: 200px;
+}
+
+.cart-empty-container {
+  background-color: white;
+  height: 82px;
+  border: 1px solid rgb(203, 204, 201);
+  padding: 18px;
+  width: 60%;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cart-empty-container > h3 {
+  padding: 12px 0px;
+  font-size: 20px;
+  font-family: "Guardian-EgypTT",serif;
+  font-weight: 700;
+}
+
+.cart-empty-container > p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  padding: 12px 0px;
+  text-decoration: underline;
+}
+
