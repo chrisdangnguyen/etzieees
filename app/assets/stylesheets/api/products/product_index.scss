@@ -77,13 +77,24 @@
     line-height: 25px;
 }
 
-.edit-item-link {
+.delete-listing-button {
+    margin-top: 5px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+}
+
+.edit-item-link, .delete-listing-button{
     color: white;
     text-decoration: none;
     font-size: 14px;
 }
 
-.edit-item-button:hover {
+.edit-item-button:hover, .delete-listing-button:hover {
     background-color: grayscale($color: #797878);
 }
 

@@ -69,7 +69,7 @@ class ProductForm extends React.Component {
 
     handleDelete() {
         this.props.deleteProduct(this.props.product.id)
-            .then(() => { this.props.history.push(`/users/${this.props.userId}`)})
+            .then(() => { this.props.history.push(`/products/new`)})
     }
 
     renderErrors() {
@@ -106,7 +106,7 @@ class ProductForm extends React.Component {
 
         if (this.props.formType === "edit form") {
             header = "Update listing";
-            deleteButton = <button onClick={this.handleDelete} className="delete-button">Delete listing</button>
+            // deleteButton = <button onClick={this.handleDelete} className="delete-button">Delete listing</button>
         } else {
             header = "Add a new listing";
         }

@@ -1,6 +1,6 @@
 import {connect } from 'react-redux';
 import ProductIndex from './product_index';
-import { fetchAllProducts, fetchCategory } from "../../actions/product_actions"
+import { fetchAllProducts, fetchCategory, deleteProduct } from "../../actions/product_actions"
 
 const mapSTP = (state, ownProps) => ({
     // products: Object.values(state.entities.products),
@@ -25,7 +25,8 @@ const mapDTP = (dispatch, ownProps) => {
             return dispatch({ type: "null_action" }); 
         }
     }
-     return {action: () => validatePath() }
+     return {action: () => validatePath(),
+            deleteProduct: productId => dispatch(deleteProduct(productId)) }
 
     
 };

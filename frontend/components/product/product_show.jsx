@@ -32,9 +32,8 @@ class ProductShow extends React.Component {
       if (!this.props.userId) {
         this.props.openModal('login')
       } else {
-        this.props.addCartItem(this.state);
-        this.props.history.push(`/cart`)
-
+        this.props.addCartItem(this.state)
+          .then(() => (this.props.history.push(`/cart`)))
       }
     }
 

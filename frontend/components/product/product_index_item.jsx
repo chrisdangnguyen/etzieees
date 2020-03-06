@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const ProductIndexItem = ({product, currentUserId, userid}) => {
+const ProductIndexItem = ({product, currentUserId, userid, deleteProduct}) => {
     
-
-
 
     return (
       <div className="product-item">
@@ -21,13 +19,18 @@ const ProductIndexItem = ({product, currentUserId, userid}) => {
           </div>
 
           {userid !== product.user_id ? null : (
-            <div className="edit-item-button">
+            <div className="">
               <Link
                 to={`/products/${product.id}/edit`}
                 className="edit-item-link"
               >
-                Edit item
+                <div className='edit-item-button'>
+                  Edit item
+                </div>
               </Link>
+              <button onClick={() => deleteProduct(product.id)} className="delete-listing-button">
+                Delete listing
+              </button>
             </div>
           )}
         </div>

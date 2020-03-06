@@ -16,13 +16,15 @@ class UserProducts extends React.Component {
 
   render() {
 
+
     const userProducts = this.props.products.map((product, i) => {
       if (product.user_id !== this.props.userId) {
         return null;
       }
       return (
         <div key={product.id}>
-          <ProductIndexItem key={product.id} product={product} user={this.props.userId} userid={this.props.userid} />
+          <ProductIndexItem key={product.id} product={product} user={this.props.userId} userid={this.props.userid}
+          deleteProduct={this.props.deleteProduct} />
         </div>
       )
     })

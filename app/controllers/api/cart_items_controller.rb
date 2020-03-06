@@ -1,5 +1,5 @@
 class Api::CartItemsController < ApplicationController
-  # before_action :require_logged_in
+  before_action :require_logged_in
 
   def create
     @cart_item = current_user.cart_items.new(cart_item_params)

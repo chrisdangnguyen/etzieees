@@ -1,4 +1,4 @@
-import { 
+ import { 
     RECEIVE_ALL_PRODUCTS,
     RECEIVE_PRODUCT,
     REMOVE_PRODUCT
