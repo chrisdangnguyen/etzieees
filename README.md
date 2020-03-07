@@ -2,8 +2,7 @@
 
 Etzieees is a clone of the e-commerce website Etsy, which focuses on unique or handmade creative goods.
 
-[Etzieees Live](https://etzieees.herokuapp.com/) is deployed on Heroku.
-
+[**Etzieees Live Demo**](https://etzieees.herokuapp.com/)
 
 ![Etzieees Home Page](https://github.com/chrisdangnguyen/Etsy/blob/master/app/assets/images/screenshots/etzieees_homepage.png)
 
@@ -20,8 +19,6 @@ Backend
 * Ruby on Rails
 * PostgreSQL
 
-* Amazon S3
-
 Etzieees was built using Ruby on Rails framework with a PostgreSQL Databse for the backend. The dynamic frontend was built using React.js and Redux for an interactive usability single-page app. Amazon Web Services S3 was used to store uploaded images.
 
 ## Features 
@@ -33,7 +30,6 @@ Etzieees was built using Ruby on Rails framework with a PostgreSQL Databse for t
 * Products can be filtered based on its catergory
 
 ### Cart
-
 ![cart page](cart.gif)
 
 ```javascript
@@ -47,8 +43,9 @@ handleAddToCart(e) {
   }
 }
 ```
-* Product will be added to the user's cart upon successful submission of the 'Add to cart' button, only when the user is logged in. Otherwise, the user is prompted to log in to continue the action. 
+* Product will be added to the user's cart upon successful submission of the 'Add to cart' button, which is when the user is logged in. Otherwise, the user is prompted to log in to continue the action. 
 
+<br/>  
 
 ```javascript
 
@@ -82,6 +79,50 @@ return (
 ```
 * Cart will display all products added. Otherwise, a message will display to the user the cart is empty. 
 
+### Category
+![category](category.gif)
+```javascript
+const mapDTP = (dispatch, ownProps) => {
+ const validatePath = () => {
+  if (ownProps.match.path === '/products') {
+    return dispatch(fetchAllProducts());
+  } 
+  else if (ownProps.match.path === '/category/:category' ) {
+     return dispatch(fetchCategory(ownProps.match.params.category))
+  } else {
+     return dispatch({ type: "null_action" }); 
+  }
+ }
+ return {action: () => validatePath(),
+   deleteProduct: productId => dispatch(deleteProduct(productId)) }
+};
+```
+* Depending on the path, either an action to retrieve all products or an action to retrieve products with the correct category type will be called. 
+
+### Search
+![search](search.gif)
+```ruby
+def search 
+ search_query = params[:query].downcase 
+  @products = Product.all.select do |product|
+    title = product.title.downcase
+    seller = product.seller.name.downcase
+    (title.include?(search_query) || seller.include?(search_query))
+ end
+ 
+ render :index
+end
+```
+```javascript
+handleSubmit(e) {
+ e.preventDefault();
+ e.stopPropagation();
+ this.props.fetchSearchProducts(this.state.query).then(() => {
+   this.props.history.push("/search")
+ })
+}
+ ```
+ * Allow users to search by product title and seller name.
 
 ## Future Development
 * Product reviews 
