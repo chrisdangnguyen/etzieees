@@ -6,6 +6,8 @@ Etzieees is a clone of the e-commerce website Etsy, which focuses on unique or h
 
 [Etzieees Live](https://etzieees.herokuapp.com/) is deployed on Heroku.
 
+![](splash.mp4.gif)
+
 
 ![Etzieees Home Page](https://github.com/chrisdangnguyen/Etsy/blob/master/app/assets/images/screenshots/etzieees_homepage.png)
 
