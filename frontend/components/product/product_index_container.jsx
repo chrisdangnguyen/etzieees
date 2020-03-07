@@ -23,7 +23,6 @@ const mapDTP = (dispatch, ownProps) => {
      return {action: () => validatePath(),
             deleteProduct: productId => dispatch(deleteProduct(productId)) }
 
-    
 };
 
 export default connect(mapSTP, mapDTP)(ProductIndex);
