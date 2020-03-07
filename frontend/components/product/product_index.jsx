@@ -32,7 +32,7 @@ class ProductIndex extends React.Component {
                     product={product}
                     key={product.id}
                     currentUserId={this.props.currentUser.id}
-                    userid={this.props.userid}
+                    userid={this.props.userid} 
                     />
     
 
