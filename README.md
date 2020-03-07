@@ -9,6 +9,8 @@ Etzieees is a clone of the e-commerce website Etsy, which focuses on unique or h
 
 ![Etzieees Home Page](https://github.com/chrisdangnguyen/Etsy/blob/master/app/assets/images/screenshots/etzieees_homepage.png)
 
+![](splash.gif)
+
 ## Built with
 * React.js
 * Redux.js
