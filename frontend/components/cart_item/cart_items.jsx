@@ -99,7 +99,6 @@ class CartItems extends React.Component {
       )
     }
   }
-
 }
 
 export default withRouter(CartItems);
