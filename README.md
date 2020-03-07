@@ -27,7 +27,7 @@ Etzieees was built using Ruby on Rails framework with a PostgreSQL Databse for t
 * Users are able to create, edit, and delete a product listing 
 * Users can add, update, and remove products from their shopping cart
 * Allow users to search for products through search bar
-* Products can be filtered based on its catergory
+* Products can be filtered based on catergory
 
 ### Cart
 ![cart page](cart.gif)
