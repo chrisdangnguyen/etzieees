@@ -1,6 +1,6 @@
 import SearchBar from './search';
 import { connect } from 'react-redux';
-import { fetchSearchProducts } from '../../actions/product_actions';
+import { fetchSearchProducts, fetchProduct} from '../../actions/product_actions';
 
 const mapSTP = () => ({
 
