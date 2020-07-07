@@ -1,46 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 
-class SearchBar extends React.Component {
-  constructor(props) {
-    super(props)
+const searchBar = props => {
+  const [query, setQuery] = useState('')
 
-    this.state = {
-      query: ""
-    }
+  // const update = (field) => {
+  //   return (e) => {
+  //     setQuery(e.target.value);
+  //   }
+  // }
 
-    this.update = this.update.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-
-  update(field) {
-    return (e) => {
-      this.setState({ [field]: e.target.value });
-    }
-  }
-
-  handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    this.props.fetchSearchProducts(this.state.query).then(() => {
-      this.props.history.push("/search")
+    props.fetchSearchProducts(query).then(() => {
+      props.history.push("/search")
     })
   }
 
 
-  render() {
-    return (
-        <form className='searchbar' onSubmit={this.handleSubmit}>
-          <input type='text'
-            id='search-text'
-            onChange={this.update("query")}
-            value={this.state.query}
-            placeholder='Search for items or shops' />
-          <button type="submit" className="searchbutton"><i className="fa fa-search"></i></button>
-        </form>
-    )
-  }
+  
+  return (
+      <form className='searchbar' onSubmit={handleSubmit}>
+        <input type='text'
+          id='search-text'
+          // onChange={update("query")}
+          onChange={event => setQuery(event.target.value)}
+          value={query}
+          placeholder='Search for items or shops' />
+        <button type="submit" className="searchbutton"><i className="fa fa-search"></i></button>
+      </form>
+  )
+  
 }
 
-export default withRouter(SearchBar);
+export default withRouter(searchBar);
