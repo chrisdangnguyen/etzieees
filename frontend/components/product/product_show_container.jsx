@@ -13,7 +13,7 @@ const mapSTP = (state, ownProps) => {
     if (product) {
         seller = state.entities.users[product.user_id]
     } 
-
+  
     return {
         product: product,
         userId: state.session.id,

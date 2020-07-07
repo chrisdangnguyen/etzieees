@@ -7,7 +7,6 @@ import { openModal } from '../../actions/modal_actions';
 const mapSTP = (state) => {
   const allItems = state.entities.cartItems;
   const allCartItems = Object.keys(allItems).map(id => allItems[id])
-
   return ({
     allCartItems: allCartItems,
     user_id: state.session.id

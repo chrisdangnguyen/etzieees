@@ -25,6 +25,7 @@ class CartItems extends React.Component {
 
   render() {
     const {allCartItems} = this.props;
+   
 
     let allItems = this.props.allCartItems.map(item => {
       return (

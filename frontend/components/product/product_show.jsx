@@ -48,6 +48,8 @@ class ProductShow extends React.Component {
             return null
         }
 
+        
+
       const cartButton = userId === product.user_id
         ? ''
         : < button className="product-to-cart" onClick={this.handleAddToCart}>Add to cart</button>;

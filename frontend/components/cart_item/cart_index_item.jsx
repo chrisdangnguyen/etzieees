@@ -25,7 +25,6 @@ class CartIndexItem extends React.Component {
 
     let {item} = this.props;
 
-
     return (
       <div className="item-container">
         <div className="seller-info-container">

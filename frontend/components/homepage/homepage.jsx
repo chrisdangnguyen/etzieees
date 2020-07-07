@@ -6,7 +6,6 @@ import HomeProducts from '../product/home_products_container';
 
 const homePage = () => {
 
-
     const aboutHome = (
         <div className="about-home">
             <div className="about-home-container">

@@ -25,12 +25,19 @@ const receiveCartItemErrors = errors => ({
   errors
 });
 
-export const addCartItem = cartItem => dispatch => (
-  CartItemAPIUtil.addCartItem(cartItem)
-    .then(cartItem => dispatch(receiveCartItem(cartItem)),
+export const addCartItem = cartItem => dispatch => {
+  console.log(cartItem)
+  return(
+    CartItemAPIUtil.addCartItem(cartItem)
+    .then(cartItem => {
+      console.log(cartItem)
+      dispatch(receiveCartItem(cartItem))
+      console.log(cartItem)
+    }
+      ,
     errors =>(dispatch(receiveCartItemErrors(errors.responseJSON)))
   ) 
-);
+)};
 
 export const fetchAllCartItems = () => dispatch => (
   CartItemAPIUtil.fetchAllCartItems()
