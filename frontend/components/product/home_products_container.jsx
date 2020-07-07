@@ -3,8 +3,7 @@ import HomeProducts from './home_products';
 import { fetchAllProducts } from '../../actions/product_actions';
 
 const mapSTP = (state) => ({
-  products: Object.values(state.entities.products).slice(0,10)
-
+  products: Object.values(state.entities.products).slice(0, 35)
 });
 
 const mapDTP = dispatch => ({

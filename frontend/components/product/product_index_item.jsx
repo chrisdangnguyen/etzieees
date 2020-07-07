@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const ProductIndexItem = ({product, currentUserId, userid, deleteProduct}) => {
-    
-
     return (
       <div className="product-item">
         <Link to={`/products/${product.id}`}>

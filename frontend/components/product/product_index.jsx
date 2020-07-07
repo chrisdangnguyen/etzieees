@@ -34,11 +34,8 @@ class ProductIndex extends React.Component {
                     currentUserId={this.props.currentUser.id}
                     userid={this.props.userid} 
                     />
-    
-
                 )
-            }
-            ) ;
+        });
             
         if (products.length === 0) {
             products = (

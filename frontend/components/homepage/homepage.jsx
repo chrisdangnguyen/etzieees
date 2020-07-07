@@ -75,8 +75,8 @@ const homePage = () => {
             </div>
             
             <div className="home-products">
-                    <h1>Popular right now</h1>
-                    <HomeProducts />
+                <h1>Popular right now</h1>
+                <HomeProducts />
             </div>
 
             {aboutHome}
