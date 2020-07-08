@@ -1,47 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import ProductIndexItem from '../product/product_index_item';
-// import ProductIndexItem from '../product/product_index_item';
 
 
-class UserProducts extends React.Component {
-  constructor(props) {
-    super(props)
+const UserProducts = props => {
 
-  }
+  useEffect(() => {
+    props.fetchUserProducts(props.userId)
+  }, [props.userId])
 
-  componentDidMount() {
-    this.props.fetchUserProducts(this.props.userId)
-  }
-
-  render() {
-
-
-    const userProducts = this.props.products.map((product, i) => {
-      if (product.user_id !== this.props.userId) {
-        return null;
-      }
-      return (
-        <div key={product.id}>
-          <ProductIndexItem key={product.id} product={product} user={this.props.userId} userid={this.props.userid}
-          deleteProduct={this.props.deleteProduct} />
-        </div>
-      )
-    })
-
-    // const finalProducts = userProducts.map( product => {
-    //   if (product.seller.id === this.props.userId)
-
-    // })
-
-    return(
-      <div className="user-products">
-        <ul className="product-list">
-          {userProducts}
-        </ul>
+  const userProducts = props.products.map((product) => {
+    if (product.user_id !== props.userId) {
+      return null;
+    }
+    return (
+      <div key={product.id}>
+        <ProductIndexItem key={product.id} product={product} user={props.userId} userid={props.userid}
+        deleteProduct={props.deleteProduct} />
       </div>
     )
-  }
+  })
+
+  return(
+    <div className="user-products">
+      <ul className="product-list">
+        {userProducts}
+      </ul>
+    </div>
+  )
 }
 
 
