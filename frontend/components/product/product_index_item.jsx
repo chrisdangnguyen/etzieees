@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductIndexItem = ({product, currentUserId, userid, deleteProduct}) => {
+const ProductIndexItem = ({product, userid, deleteProduct}) => {
     return (
       <div className="product-item">
         <Link to={`/products/${product.id}`}>
