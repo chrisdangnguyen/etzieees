@@ -21,7 +21,6 @@ const ProductShow = props => {
   }
 
   function handleChange(e) {
-    console.log(e)
     setProductState({...productState, quantity: e})
   }
 

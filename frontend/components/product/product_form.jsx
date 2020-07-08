@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 const ProductForm = props => {
     //     this.state = Object.assign( {}, { photoFile: '', photoUrl: ''}, props.product)
-    const [productState, setProductState] = useState({...props.product, photoFile: '', photoUrl: '' })
+    const [productState, setProductState] = useState({...props.product, photoFile: '', photoUrl: '' });
 
     useEffect(() => {
       if (props.formType === "edit form") {
@@ -14,7 +14,7 @@ const ProductForm = props => {
 
     useEffect(() => {
         setProductState(props.product);
-    }, [props.product])
+    }, [props.product]);
 
 
     function update(field) {

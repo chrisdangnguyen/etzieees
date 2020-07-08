@@ -26,15 +26,11 @@ const receiveCartItemErrors = errors => ({
 });
 
 export const addCartItem = cartItem => dispatch => {
-  console.log(cartItem)
   return(
     CartItemAPIUtil.addCartItem(cartItem)
     .then(cartItem => {
-      console.log(cartItem)
       dispatch(receiveCartItem(cartItem))
-      console.log(cartItem)
-    }
-      ,
+    },
     errors =>(dispatch(receiveCartItemErrors(errors.responseJSON)))
   ) 
 )};
