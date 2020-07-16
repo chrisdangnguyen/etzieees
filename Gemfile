@@ -29,7 +29,6 @@ gem 'aws-sdk-s3'
 gem 'binding_of_caller'
 gem 'better_errors'
 gem 'jquery-rails'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
